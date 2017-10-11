@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { BackHandler } from 'react-native'
 import { addNavigationHelpers, StackNavigator, NavigationActions } from 'react-navigation'
 import Routes from './Routes'
+import PropTypes from 'prop-types';
 
 export const AppNavigator = StackNavigator(Routes)
 
@@ -30,6 +31,11 @@ class AppWithNavigationState extends Component {
     )
   }
 }
+
+AppWithNavigationState.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  nav: PropTypes.shape({}).isRequired,
+};
 
 const mapStateToProps = state => ({
   nav: state.nav
