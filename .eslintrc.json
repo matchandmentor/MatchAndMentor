@@ -1,5 +1,8 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "react-native-prettier"
+  ],
   "rules": {
     "react/jsx-filename-extension": [1, {"extensions": [".js"]}]
   }

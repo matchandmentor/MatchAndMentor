@@ -9,6 +9,7 @@
     "lintfix": "eslint src --fix"
   },
   "dependencies": {
+    "eslint-config-react-native-prettier": "^1.0.1",
     "prop-types": "^15.6.0",
     "react": "16.0.0-alpha.12",
     "react-native": "0.48.4",

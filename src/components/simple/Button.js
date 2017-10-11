@@ -3,11 +3,7 @@ import { TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 
 function Button({ onPress, children }) {
-  return (
-    <TouchableOpacity onPress={onPress}>
-      {children}
-    </TouchableOpacity>
-  );
+  return <TouchableOpacity onPress={onPress}>{children}</TouchableOpacity>;
 }
 
 Button.propTypes = {

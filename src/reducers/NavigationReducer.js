@@ -8,7 +8,7 @@ export default (state, action) => {
     case HOME_SCREEN:
       nextState = AppNavigator.router.getStateForAction(
         NavigationActions.navigate({ routeName: HOME_SCREEN }),
-        state,
+        state
       );
       break;
     default:

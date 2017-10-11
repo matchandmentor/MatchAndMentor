@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BackHandler } from 'react-native';
-import { addNavigationHelpers, StackNavigator, NavigationActions } from 'react-navigation';
+import {
+  addNavigationHelpers,
+  StackNavigator,
+  NavigationActions,
+} from 'react-navigation';
 import PropTypes from 'prop-types';
 import Routes from './Routes';
 

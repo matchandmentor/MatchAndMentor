@@ -12,9 +12,9 @@ const styles = {
 
 export default class HomeScreen extends Component {
   static navigationOptions() {
-    return ({
+    return {
       title: 'Home',
-    });
+    };
   }
   render() {
     return (
