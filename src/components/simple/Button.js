@@ -1,12 +1,14 @@
-import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
-function Button ({onPress, children}) {
-  return (
-    <TouchableOpacity onPress={onPress}>
-      {children}
-    </TouchableOpacity>
-  )
+function Button({ onPress, children }) {
+  return <TouchableOpacity onPress={onPress}>{children}</TouchableOpacity>;
 }
 
-export default Button
+Button.propTypes = {
+  onPress: PropTypes.func.isRequired,
+  children: PropTypes.shape({}).isRequired,
+};
+
+export default Button;
