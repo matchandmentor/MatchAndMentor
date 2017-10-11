@@ -1,7 +1,7 @@
-import HomeScreen from '../components/stateful/HomeScreen'
+import HomeScreen from '../components/stateful/HomeScreen';
 
 const Routes = {
-  HomeScreen: { screen: HomeScreen }
-}
+  HomeScreen: { screen: HomeScreen },
+};
 
-export default Routes
+export default Routes;
