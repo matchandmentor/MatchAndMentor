@@ -1,9 +1,9 @@
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
 
-function Button ({onPress, children}) {
+function Button ({onPress, children, style, testID}) {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} style={style} testID={testID}>
       {children}
     </TouchableOpacity>
   )

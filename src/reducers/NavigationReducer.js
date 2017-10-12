@@ -1,13 +1,19 @@
 import { NavigationActions } from 'react-navigation'
 import { AppNavigator } from '../navigation/AppWithNavigationState'
-import { HOME_SCREEN } from '../actions/types'
+import { NAME_SCREEN, ROLE_SCREEN } from '../actions/types'
 
 export default (state, action) => {
   let nextState
   switch (action.type) {
-    case HOME_SCREEN:
+    case NAME_SCREEN:
       nextState = AppNavigator.router.getStateForAction(
-        NavigationActions.navigate({ routeName: HOME_SCREEN }),
+        NavigationActions.navigate({ routeName: NAME_SCREEN }),
+        state
+      )
+      break
+    case ROLE_SCREEN:
+      nextState = AppNavigator.router.getStateForAction(
+        NavigationActions.navigate({ routeName: ROLE_SCREEN }),
         state
       )
       break

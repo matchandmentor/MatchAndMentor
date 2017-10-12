@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite id="0" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" hostname="localhost" tests="2" failures="0" time="1.651" timestamp="2017-10-12T03:16:17">
+    <properties>
+    </properties>
+    <testcase classname="renders correctly" name="renders correctly" time="0">
+    </testcase>
+    <testcase classname="calls submit on button press" name="calls submit on button press" time="0">
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+  <testsuite id="1" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" hostname="localhost" tests="1" failures="0" time="0.095" timestamp="2017-10-12T03:16:18">
+    <properties>
+    </properties>
+    <testcase classname="renders correctly" name="renders correctly" time="0">
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+  <testsuite id="2" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" hostname="localhost" tests="1" failures="0" time="0.066" timestamp="2017-10-12T03:16:18">
+    <properties>
+    </properties>
+    <testcase classname="renders correctly" name="renders correctly" time="0">
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+</testsuites>

@@ -1,7 +1,9 @@
-import HomeScreen from '../components/stateful/HomeScreen'
+import NameScreen from '../components/stateful/NameScreen'
+import RoleScreen from '../components/stateful/RoleScreen'
 
 const Routes = {
-  HomeScreen: { screen: HomeScreen }
+  NameScreen: { screen: NameScreen },
+  RoleScreen: { screen: RoleScreen }
 }
 
 export default Routes
