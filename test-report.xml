@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite id="0" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/NavigationReducer.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/NavigationReducer.js" hostname="localhost" tests="3" failures="0" time="1.377" timestamp="2017-10-13T04:14:51">
+  <testsuite id="0" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/NavigationReducer.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/NavigationReducer.js" hostname="localhost" tests="3" failures="0" time="1.421" timestamp="2017-10-13T04:32:26">
     <properties>
     </properties>
     <testcase classname="navigation reducer should return intial state" name="navigation reducer should return intial state" time="0">
@@ -12,7 +12,15 @@
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="1" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" hostname="localhost" tests="3" failures="0" time="0.195" timestamp="2017-10-13T04:14:52">
+  <testsuite id="1" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" hostname="localhost" tests="1" failures="0" time="0.13" timestamp="2017-10-13T04:32:28">
+    <properties>
+    </properties>
+    <testcase classname="renders correctly" name="renders correctly" time="0">
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+  <testsuite id="2" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" hostname="localhost" tests="3" failures="0" time="0.154" timestamp="2017-10-13T04:32:28">
     <properties>
     </properties>
     <testcase classname="renders correctly" name="renders correctly" time="0">
@@ -24,7 +32,7 @@
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="2" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/actions/UserActions.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/actions/UserActions.js" hostname="localhost" tests="2" failures="0" time="0.129" timestamp="2017-10-13T04:14:53">
+  <testsuite id="3" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/actions/UserActions.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/actions/UserActions.js" hostname="localhost" tests="2" failures="0" time="0.138" timestamp="2017-10-13T04:32:28">
     <properties>
     </properties>
     <testcase classname="updateName action" name="updateName action" time="0">
@@ -34,7 +42,7 @@
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="3" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" hostname="localhost" tests="1" failures="0" time="0.067" timestamp="2017-10-13T04:14:53">
+  <testsuite id="4" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" hostname="localhost" tests="1" failures="0" time="0.078" timestamp="2017-10-13T04:32:28">
     <properties>
     </properties>
     <testcase classname="renders correctly" name="renders correctly" time="0">
@@ -42,15 +50,7 @@
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="4" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" hostname="localhost" tests="1" failures="0" time="0.103" timestamp="2017-10-13T04:14:53">
-    <properties>
-    </properties>
-    <testcase classname="renders correctly" name="renders correctly" time="0">
-    </testcase>
-    <system-out/>
-    <system-err/>
-  </testsuite>
-  <testsuite id="5" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/UserReducer.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/UserReducer.js" hostname="localhost" tests="2" failures="0" time="0.04" timestamp="2017-10-13T04:14:53">
+  <testsuite id="5" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/UserReducer.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/UserReducer.js" hostname="localhost" tests="2" failures="0" time="0.052" timestamp="2017-10-13T04:32:28">
     <properties>
     </properties>
     <testcase classname="user reducer should return intial state" name="user reducer should return intial state" time="0">

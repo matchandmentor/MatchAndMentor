@@ -6,4 +6,4 @@ const Routes = {
   RoleScreen: { screen: RoleScreen }
 }
 
-export default Routes
+export default Routes;

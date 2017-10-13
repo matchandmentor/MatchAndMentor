@@ -1,5 +1,6 @@
-import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
 function Button ({onPress, children, style, disabled, testID}) {
   return (
@@ -9,4 +10,8 @@ function Button ({onPress, children, style, disabled, testID}) {
   )
 }
 
-export default Button
+Button.propTypes = {
+  onPress: PropTypes.func.isRequired,
+};
+
+export default Button;

@@ -3,7 +3,7 @@ import { AppNavigator } from '../navigation/AppWithNavigationState'
 import { NAME_SCREEN, ROLE_SCREEN } from '../actions/types'
 
 export default (state, action) => {
-  let nextState
+  let nextState;
   switch (action.type) {
     case NAME_SCREEN:
       nextState = AppNavigator.router.getStateForAction(
@@ -15,11 +15,11 @@ export default (state, action) => {
       nextState = AppNavigator.router.getStateForAction(
         NavigationActions.navigate({ routeName: ROLE_SCREEN }),
         state
-      )
-      break
+      );
+      break;
     default:
-      nextState = AppNavigator.router.getStateForAction(action, state)
-      break
+      nextState = AppNavigator.router.getStateForAction(action, state);
+      break;
   }
-  return nextState || state
-}
+  return nextState || state;
+};
