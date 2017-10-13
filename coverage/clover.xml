@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1507869149334" clover="3.2.0">
-  <project timestamp="1507869149335" name="All files">
-    <metrics statements="42" coveredstatements="42" conditionals="26" coveredconditionals="23" methods="13" coveredmethods="13" elements="81" coveredelements="78" complexity="0" loc="42" ncloc="42" packages="5" files="10" classes="10">
+<coverage generated="1507925892935" clover="3.2.0">
+  <project timestamp="1507925892935" name="All files">
+    <metrics statements="41" coveredstatements="41" conditionals="26" coveredconditionals="23" methods="13" coveredmethods="13" elements="80" coveredelements="77" complexity="0" loc="41" ncloc="41" packages="5" files="10" classes="10">
       <package name="MatchAndMentor">
         <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
         <file name="setupTests.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/setupTests.js">
@@ -18,16 +18,15 @@
         </file>
       </package>
       <package name="MatchAndMentor.src.actions">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <file name="UserActions.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/actions/UserActions.js">
-          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
           <line num="4" count="3" type="stmt"/>
           <line num="5" count="2" type="stmt"/>
           <line num="6" count="2" type="stmt"/>
           <line num="7" count="1" type="stmt"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="13" count="3" type="stmt"/>
-          <line num="14" count="2" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/actions/index.js">
           <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -44,21 +43,21 @@
         <file name="Button.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/components/simple/Button.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="6" count="2" type="stmt"/>
-          <line num="13" count="3" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
         </file>
         <file name="ScreenHeader.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/components/simple/ScreenHeader.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="5" count="2" type="stmt"/>
-          <line num="12" count="3" type="stmt"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
         </file>
         <file name="SignUpName.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/components/simple/SignUpName.js">
           <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="6" methods="4" coveredmethods="4"/>
-          <line num="7" count="2" type="stmt"/>
-          <line num="34" count="1" type="stmt"/>
-          <line num="35" count="1" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
           <line num="43" count="1" type="stmt"/>
-          <line num="48" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+          <line num="67" count="1" type="stmt"/>
         </file>
       </package>
       <package name="MatchAndMentor.src.navigation">

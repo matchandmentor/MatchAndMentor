@@ -1,6 +1,6 @@
-import { NavigationActions } from 'react-navigation'
-import { AppNavigator } from '../navigation/AppWithNavigationState'
-import { NAME_SCREEN, ROLE_SCREEN } from '../actions/types'
+import { NavigationActions } from 'react-navigation';
+import { AppNavigator } from '../navigation/AppWithNavigationState';
+import { NAME_SCREEN, ROLE_SCREEN } from '../actions/types';
 
 export default (state, action) => {
   let nextState;
@@ -9,8 +9,8 @@ export default (state, action) => {
       nextState = AppNavigator.router.getStateForAction(
         NavigationActions.navigate({ routeName: NAME_SCREEN }),
         state
-      )
-      break
+      );
+      break;
     case ROLE_SCREEN:
       nextState = AppNavigator.router.getStateForAction(
         NavigationActions.navigate({ routeName: ROLE_SCREEN }),

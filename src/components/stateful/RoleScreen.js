@@ -1,12 +1,6 @@
-import React, { Component } from 'react'
-import { View } from 'react-native'
+import React from 'react';
+import { View } from 'react-native';
 
-class RoleScreen extends Component {
-  render () {
-    return (
-      <View />
-    )
-  }
-}
+const RoleScreen = () => <View />;
 
-export default RoleScreen
+export default RoleScreen;

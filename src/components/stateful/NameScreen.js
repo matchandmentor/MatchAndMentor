@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import SignUpName from '../simple/SignUpName'
+import React from 'react';
+import { connect } from 'react-redux';
+import SignUpName from '../simple/SignUpName';
 
-class NameScreen extends Component {
-  render () {
-    return (
-      <SignUpName title='Your name' name={this.props.user.name} dispatch={this.props.dispatch} />
-    )
-  }
-}
+const NameScreen = props => (
+  <SignUpName
+    title="Your name"
+    name={props.user.name}
+    dispatch={props.dispatch}
+  />
+);
 
-const mapStateToProps = ({ user }) => {
-  return { user }
-}
+const mapStateToProps = ({ user }) => ({ user });
 
-export default connect(mapStateToProps)(NameScreen)
+export default connect(mapStateToProps)(NameScreen);

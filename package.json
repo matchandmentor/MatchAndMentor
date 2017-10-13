@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint": "eslint src",
+    "lintfix": "eslint src --fix"
   },
   "dependencies": {
     "firebase": "^4.5.0",
-    "test": "jest",
-    "lint": "eslint src",
-    "lintfix": "eslint src --fix",
     "eslint-config-react-native-prettier": "^1.0.1",
     "prop-types": "^15.6.0",
     "react": "16.0.0-alpha.12",
