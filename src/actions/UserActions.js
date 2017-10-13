@@ -1,5 +1,5 @@
 import firebase from 'firebase'
-import { ROLE_SCREEN } from '../actions/types'
+import { ROLE_SCREEN, UPDATE_NAME } from '../actions/types'
 
 export const submitName = (name) => {
   const { currentUser } = firebase.auth()
@@ -7,5 +7,12 @@ export const submitName = (name) => {
     firebase.database().ref(`/users/${currentUser.uid}/profile`).set({name}).then(() => {
       dispatch({ type: ROLE_SCREEN })
     })
+  }
+}
+
+export const updateName = (name) => {
+  return {
+    type: UPDATE_NAME,
+    payload: name
   }
 }

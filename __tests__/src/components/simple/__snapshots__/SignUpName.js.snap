@@ -49,28 +49,35 @@ exports[`renders correctly 1`] = `
     </View>
     <TextInput
       maxLength={100}
-      name="name"
-      onBlur={[Function]}
       onChangeText={[Function]}
-      onDragStart={[Function]}
-      onDrop={[Function]}
       onEndEditing={[Function]}
-      onFocus={[Function]}
       onSubmitEditing={[Function]}
       style={
         Object {
-          "bottomBorderColor": "black",
-          "bottomBorderWidth": 1,
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
           "height": 40,
           "margin": 20,
         }
       }
-      value=""
+      testID="name-input"
     />
   </View>
-  <View>
+  <View
+    keyboardVerticalOffset={64}
+    onLayout={[Function]}
+    style={
+      Array [
+        undefined,
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
     <TouchableHighlight
       activeOpacity={0.85}
+      disabled={false}
       onPress={[Function]}
       style={
         Object {

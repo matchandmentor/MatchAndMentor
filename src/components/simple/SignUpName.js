@@ -1,10 +1,8 @@
 import React from 'react'
-import { View, Text, TextInput, Alert, Keyboard, TouchableWithoutFeedback } from 'react-native'
+import { View, Text, TextInput, Keyboard, TouchableWithoutFeedback, Platform, KeyboardAvoidingView } from 'react-native'
 import Button from './Button'
 import ScreenHeader from './ScreenHeader'
-import { reduxForm, Field } from 'redux-form'
-import { submitName } from '../../actions'
-import store from '../../reducers/store'
+import { submitName, updateName } from '../../actions'
 
 const styles = {
   container: {
@@ -26,23 +24,15 @@ const styles = {
   },
   inputStyle: {
     height: 40,
-    bottomBorderColor: 'black',
-    bottomBorderWidth: 1,
+    borderBottomColor: 'black',
+    borderBottomWidth: Platform.OS === 'ios' ? 1 : 0,
     margin: 20
   }
 }
 
-function submit (values) {
+function submit (name, dispatch) {
   Keyboard.dismiss()
-  if (!values.name) {
-    Alert.alert('Submission Error', 'You must enter your name', [{text: 'OK', onPress: () => console.log('OK Pressed')}], { cancelable: false })
-  } else {
-    store.dispatch(submitName(values.name))
-  }
-}
-function renderInput ({ input: { onChange, ...restInput }, meta: { error } }) {
-  return <TextInput style={styles.inputStyle} onChangeText={onChange} {...restInput} maxLength={100}
-    onSubmitEditing={Keyboard.dismiss} onEndEditing={Keyboard.dismiss} />
+  dispatch(submitName(name))
 }
 function SignUpName (props) {
   return (
@@ -50,16 +40,18 @@ function SignUpName (props) {
       <View style={styles.container}>
         <View>
           <ScreenHeader title='Your Name' />
-          <Field name='name' component={renderInput} />
+          <TextInput style={styles.inputStyle} onChangeText={(value) => props.dispatch(updateName(value))} maxLength={100}
+            onSubmitEditing={Keyboard.dismiss} onEndEditing={Keyboard.dismiss} testID='name-input' />
         </View>
-        <View>
-          <Button style={styles.buttonStyle} onPress={props.handleSubmit(submit)} testID='name-submit-button'>
+        <KeyboardAvoidingView behavior='padding' keyboardVerticalOffset={64}>
+          <Button style={(props.name !== null && props.name !== '') ? styles.buttonStyle : {...styles.buttonStyle, backgroundColor: '#e9e9e9'}}
+            onPress={() => submit(props.name, props.dispatch)} disabled={(props.name === null || props.name === '')} testID='name-submit-button'>
             <Text style={styles.textStyle}>Continue</Text>
           </Button>
-        </View>
+        </KeyboardAvoidingView>
       </View>
     </TouchableWithoutFeedback>
   )
 }
 
-export default reduxForm({ form: 'name' })(SignUpName)
+export default SignUpName
