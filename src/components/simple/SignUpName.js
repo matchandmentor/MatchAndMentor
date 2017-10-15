@@ -29,6 +29,7 @@ const styles = {
     color: 'white',
     alignSelf: 'center',
     fontSize: 24,
+    fontFamily: 'Montserrat-Regular',
   },
   inputStyle: {
     height: 40,

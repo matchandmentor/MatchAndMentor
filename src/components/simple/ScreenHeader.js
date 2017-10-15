@@ -6,8 +6,9 @@ const styles = {
     margin: 20,
   },
   textStyle: {
-    fontSize: 24,
+    fontSize: 28,
     color: 'black',
+    fontFamily: 'Montserrat-SemiBold',
   },
 };
 
