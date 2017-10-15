@@ -48,7 +48,7 @@ function SignUpName(props) {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
         <View>
-          <ScreenHeader title="Your Name" />
+          <ScreenHeader title={props.title} />
           <TextInput
             style={styles.inputStyle}
             onChangeText={value => props.dispatch(updateName(value))}
