@@ -59,31 +59,35 @@ function SignUpRoles(props) {
     <View style={styles.container}>
       <View>
         <ScreenHeader title="Your Roles" />
-        <Button style={
-          props.mentorSelected
-            ? { ...styles.roleStyle, backgroundColor: '#55A838' }
-            : styles.roleStyle
+        <Button
+          style={
+            props.mentorSelected
+              ? { ...styles.roleStyle, backgroundColor: '#55A838' }
+              : styles.roleStyle
           }
-          onPress={() => props.dispatch(updateMentorRole(!props.mentorSelected))}
+          onPress={() =>
+            props.dispatch(updateMentorRole(!props.mentorSelected))}
           testID="mentor-button">
           <Text style={styles.roleTextStyle}>Mentor</Text>
-          <Icon name="check-circle-o" size={30} color='black' />
+          <Icon name="check-circle-o" size={30} color="black" />
         </Button>
-        <Button style={
-          props.menteeSelected
-            ? { ...styles.roleStyle, backgroundColor: '#55A838' }
-            : styles.roleStyle
+        <Button
+          style={
+            props.menteeSelected
+              ? { ...styles.roleStyle, backgroundColor: '#55A838' }
+              : styles.roleStyle
           }
-          onPress={() => props.dispatch(updateMenteeRole(!props.menteeSelected))}
+          onPress={() =>
+            props.dispatch(updateMenteeRole(!props.menteeSelected))}
           testID="mentee-button">
           <Text style={styles.roleTextStyle}>Mentee</Text>
-          <Icon name="check-circle-o" size={30} color='black' />
+          <Icon name="check-circle-o" size={30} color="black" />
         </Button>
       </View>
       <View>
         <Button
           style={
-            (props.mentorSelected || props.menteeSelected)
+            props.mentorSelected || props.menteeSelected
               ? styles.buttonStyle
               : { ...styles.buttonStyle, backgroundColor: '#e9e9e9' }
           }

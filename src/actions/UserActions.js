@@ -1,5 +1,11 @@
 import firebase from 'firebase';
-import { ROLE_SCREEN, UPDATE_NAME, UPDATE_ROLES, SKILL_SCREEN, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE } from '../actions/types';
+import {
+  ROLE_SCREEN,
+  UPDATE_NAME,
+  SKILL_SCREEN,
+  UPDATE_MENTOR_ROLE,
+  UPDATE_MENTEE_ROLE,
+} from '../actions/types';
 
 export const submitName = name => {
   const { currentUser } = firebase.auth();
@@ -31,11 +37,6 @@ export const submitRoles = roles => {
       });
   };
 };
-
-const updateRoles = roles => ({
-  type: UPDATE_ROLES,
-  payload: roles,
-});
 
 export const updateMentorRole = status => ({
   type: UPDATE_MENTOR_ROLE,

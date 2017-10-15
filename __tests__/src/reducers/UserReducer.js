@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import reducer from '../../../src/reducers/UserReducer'
-import { UPDATE_NAME, UPDATE_ROLES, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE } from '../../../src/actions/types'
+import { UPDATE_NAME, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE } from '../../../src/actions/types'
 
 const INITIAL_STATE = {
   name: '',
@@ -17,13 +17,6 @@ test('user reducer should handle UPDATE_NAME', () => {
   expect(reducer(INITIAL_STATE, { type: UPDATE_NAME, payload: 'test' })).toEqual({
     ...INITIAL_STATE,
     name: 'test'
-  })
-})
-
-test('user reducer should handle UPDATE_ROLES', () => {
-  expect(reducer(INITIAL_STATE, { type: UPDATE_ROLES, payload: 'MENTOR_ONLY' })).toEqual({
-    ...INITIAL_STATE,
-    roles: 'MENTOR_ONLY'
   })
 })
 
