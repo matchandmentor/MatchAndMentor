@@ -55,7 +55,6 @@ function submit(props) {
 }
 
 function SignUpRoles(props) {
-  console.log(props)
   return (
     <View style={styles.container}>
       <View>
@@ -65,7 +64,8 @@ function SignUpRoles(props) {
             ? { ...styles.roleStyle, backgroundColor: '#55A838' }
             : styles.roleStyle
           }
-          onPress={() => props.dispatch(updateMentorRole(!props.mentorSelected))}>
+          onPress={() => props.dispatch(updateMentorRole(!props.mentorSelected))}
+          testID="mentor-button">
           <Text style={styles.roleTextStyle}>Mentor</Text>
           <Icon name="check-circle-o" size={30} color='black' />
         </Button>
@@ -74,7 +74,8 @@ function SignUpRoles(props) {
             ? { ...styles.roleStyle, backgroundColor: '#55A838' }
             : styles.roleStyle
           }
-          onPress={() => props.dispatch(updateMenteeRole(!props.menteeSelected))}>
+          onPress={() => props.dispatch(updateMenteeRole(!props.menteeSelected))}
+          testID="mentee-button">
           <Text style={styles.roleTextStyle}>Mentee</Text>
           <Icon name="check-circle-o" size={30} color='black' />
         </Button>

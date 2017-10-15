@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite id="0" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" hostname="localhost" tests="3" failures="0" time="0.766" timestamp="2017-10-15T17:02:09">
+  <testsuite id="0" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpRoles.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpRoles.js" hostname="localhost" tests="6" failures="0" time="1.364" timestamp="2017-10-15T23:51:44">
+    <properties>
+    </properties>
+    <testcase classname="renders correctly" name="renders correctly" time="0">
+    </testcase>
+    <testcase classname="calls submit on button press with mentor selected" name="calls submit on button press with mentor selected" time="0">
+    </testcase>
+    <testcase classname="calls submit on button press with mentee selected" name="calls submit on button press with mentee selected" time="0">
+    </testcase>
+    <testcase classname="calls submit on button press with mentor and mentee selected" name="calls submit on button press with mentor and mentee selected" time="0">
+    </testcase>
+    <testcase classname="calls updateMentorRole on button press" name="calls updateMentorRole on button press" time="0">
+    </testcase>
+    <testcase classname="calls updateMenteeRole on button press" name="calls updateMenteeRole on button press" time="0">
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+  <testsuite id="1" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/NavigationReducer.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/NavigationReducer.js" hostname="localhost" tests="4" failures="0" time="0.283" timestamp="2017-10-15T23:51:45">
+    <properties>
+    </properties>
+    <testcase classname="navigation reducer should return intial state" name="navigation reducer should return intial state" time="0">
+    </testcase>
+    <testcase classname="navigation reducer should handle NAME_SCREEN" name="navigation reducer should handle NAME_SCREEN" time="0">
+    </testcase>
+    <testcase classname="navigation reducer should handle ROLE_SCREEN" name="navigation reducer should handle ROLE_SCREEN" time="0">
+    </testcase>
+    <testcase classname="navigation reducer should handle SKILL_SCREEN" name="navigation reducer should handle SKILL_SCREEN" time="0">
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+  <testsuite id="2" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/SignUpName.js" hostname="localhost" tests="3" failures="0" time="0.143" timestamp="2017-10-15T23:51:46">
     <properties>
     </properties>
     <testcase classname="renders correctly" name="renders correctly" time="0">
@@ -12,29 +44,23 @@
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="1" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/NavigationReducer.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/NavigationReducer.js" hostname="localhost" tests="3" failures="0" time="0.268" timestamp="2017-10-15T17:02:10">
-    <properties>
-    </properties>
-    <testcase classname="navigation reducer should return intial state" name="navigation reducer should return intial state" time="0">
-    </testcase>
-    <testcase classname="navigation reducer should handle NAME_SCREEN" name="navigation reducer should handle NAME_SCREEN" time="0">
-    </testcase>
-    <testcase classname="navigation reducer should handle ROLE_SCREEN" name="navigation reducer should handle ROLE_SCREEN" time="0">
-    </testcase>
-    <system-out/>
-    <system-err/>
-  </testsuite>
-  <testsuite id="2" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/actions/UserActions.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/actions/UserActions.js" hostname="localhost" tests="2" failures="0" time="0.146" timestamp="2017-10-15T17:02:10">
+  <testsuite id="3" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/actions/UserActions.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/actions/UserActions.js" hostname="localhost" tests="5" failures="0" time="0.179" timestamp="2017-10-15T23:51:46">
     <properties>
     </properties>
     <testcase classname="updateName action" name="updateName action" time="0">
     </testcase>
     <testcase classname="submitName action" name="submitName action" time="0">
     </testcase>
+    <testcase classname="updateMentorRole action" name="updateMentorRole action" time="0">
+    </testcase>
+    <testcase classname="updateMenteeRole action" name="updateMenteeRole action" time="0">
+    </testcase>
+    <testcase classname="submitRoles action" name="submitRoles action" time="0">
+    </testcase>
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="3" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" hostname="localhost" tests="1" failures="0" time="0.088" timestamp="2017-10-15T17:02:10">
+  <testsuite id="4" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/Button.js" hostname="localhost" tests="1" failures="0" time="0.095" timestamp="2017-10-15T23:51:46">
     <properties>
     </properties>
     <testcase classname="renders correctly" name="renders correctly" time="0">
@@ -42,7 +68,7 @@
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="4" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" hostname="localhost" tests="1" failures="0" time="0.084" timestamp="2017-10-15T17:02:10">
+  <testsuite id="5" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/components/simple/ScreenHeader.js" hostname="localhost" tests="1" failures="0" time="0.097" timestamp="2017-10-15T23:51:46">
     <properties>
     </properties>
     <testcase classname="renders correctly" name="renders correctly" time="0">
@@ -50,12 +76,18 @@
     <system-out/>
     <system-err/>
   </testsuite>
-  <testsuite id="5" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/UserReducer.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/UserReducer.js" hostname="localhost" tests="2" failures="0" time="0.034" timestamp="2017-10-15T17:02:10">
+  <testsuite id="6" name="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/UserReducer.js" errors="0" package="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/__tests__/src/reducers/UserReducer.js" hostname="localhost" tests="5" failures="0" time="0.053" timestamp="2017-10-15T23:51:46">
     <properties>
     </properties>
     <testcase classname="user reducer should return intial state" name="user reducer should return intial state" time="0">
     </testcase>
     <testcase classname="user reducer should handle UPDATE_NAME" name="user reducer should handle UPDATE_NAME" time="0">
+    </testcase>
+    <testcase classname="user reducer should handle UPDATE_ROLES" name="user reducer should handle UPDATE_ROLES" time="0">
+    </testcase>
+    <testcase classname="user reducer should handle UPDATE_MENTOR_ROLE" name="user reducer should handle UPDATE_MENTOR_ROLE" time="0">
+    </testcase>
+    <testcase classname="user reducer should handle UPDATE_MENTEE_ROLE" name="user reducer should handle UPDATE_MENTEE_ROLE" time="0">
     </testcase>
     <system-out/>
     <system-err/>

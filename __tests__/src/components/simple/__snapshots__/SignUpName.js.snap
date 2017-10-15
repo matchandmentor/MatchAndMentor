@@ -44,9 +44,7 @@ exports[`renders correctly 1`] = `
             "fontSize": 28,
           }
         }
-      >
-        Your Name
-      </Text>
+      />
     </View>
     <TextInput
       maxLength={100}

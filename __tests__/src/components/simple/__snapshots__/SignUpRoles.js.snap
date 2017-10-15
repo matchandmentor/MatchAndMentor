@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "margin": 20,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Montserrat-SemiBold",
+            "fontSize": 28,
+          }
+        }
+      >
+        Your Roles
+      </Text>
+    </View>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={undefined}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#e9e9e9",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "space-between",
+          "marginBottom": 20,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "paddingRight": 20,
+        }
+      }
+      testID="mentor-button"
+      underlayColor="black"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Montserrat-Regular",
+            "fontSize": 24,
+            "marginLeft": 20,
+          }
+        }
+      >
+        Mentor
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={false}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "black",
+              "fontSize": 30,
+            },
+            undefined,
+            Object {
+              "fontFamily": "FontAwesome",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={undefined}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#e9e9e9",
+          "flexDirection": "row",
+          "height": 45,
+          "justifyContent": "space-between",
+          "marginBottom": 20,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "paddingRight": 20,
+        }
+      }
+      testID="mentee-button"
+      underlayColor="black"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Montserrat-Regular",
+            "fontSize": 24,
+            "marginLeft": 20,
+          }
+        }
+      >
+        Mentee
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={false}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "black",
+              "fontSize": 30,
+            },
+            undefined,
+            Object {
+              "fontFamily": "FontAwesome",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </TouchableHighlight>
+  </View>
+  <View>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e9e9e9",
+          "borderRadius": 10,
+          "height": 45,
+          "justifyContent": "center",
+          "margin": 20,
+        }
+      }
+      testID="roles-submit-button"
+      underlayColor="black"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "white",
+            "fontFamily": "Montserrat-Regular",
+            "fontSize": 24,
+          }
+        }
+      >
+        Continue
+      </Text>
+    </TouchableHighlight>
+  </View>
+</View>
+`;
