@@ -16,7 +16,8 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "color": "black",
-        "fontSize": 24,
+        "fontFamily": "Montserrat-SemiBold",
+        "fontSize": 28,
       }
     }
   />

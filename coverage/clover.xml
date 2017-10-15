@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1507925892935" clover="3.2.0">
-  <project timestamp="1507925892935" name="All files">
+<coverage generated="1508086931406" clover="3.2.0">
+  <project timestamp="1508086931406" name="All files">
     <metrics statements="41" coveredstatements="41" conditionals="26" coveredconditionals="23" methods="13" coveredmethods="13" elements="80" coveredelements="77" complexity="0" loc="41" ncloc="41" packages="5" files="10" classes="10">
       <package name="MatchAndMentor">
         <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
@@ -48,16 +48,16 @@
         <file name="ScreenHeader.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/components/simple/ScreenHeader.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="4" count="3" type="stmt"/>
-          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
         </file>
         <file name="SignUpName.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/components/simple/SignUpName.js">
           <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="6" methods="4" coveredmethods="4"/>
           <line num="15" count="2" type="stmt"/>
-          <line num="42" count="1" type="stmt"/>
           <line num="43" count="1" type="stmt"/>
-          <line num="46" count="1" type="stmt"/>
-          <line num="53" count="1" type="stmt"/>
-          <line num="67" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="68" count="1" type="stmt"/>
         </file>
       </package>
       <package name="MatchAndMentor.src.navigation">
