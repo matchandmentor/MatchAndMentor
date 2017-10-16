@@ -1,6 +1,17 @@
 import React from 'react';
-import { View } from 'react-native';
+import { connect } from 'react-redux';
+import SignUpRoles from '../simple/SignUpRoles';
 
-const RoleScreen = () => <View />;
+const RoleScreen = props => (
+  <SignUpRoles
+    title="Your Role"
+    roles={props.user.roles}
+    mentorSelected={props.user.mentorSelected}
+    menteeSelected={props.user.menteeSelected}
+    dispatch={props.dispatch}
+  />
+);
 
-export default RoleScreen;
+const mapStateToProps = ({ user }) => ({ user });
+
+export default connect(mapStateToProps)(RoleScreen);

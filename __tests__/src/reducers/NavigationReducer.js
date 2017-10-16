@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import reducer from '../../../src/reducers/NavigationReducer'
-import { NAME_SCREEN, ROLE_SCREEN } from '../../../src/actions/types'
+import { NAME_SCREEN, ROLE_SCREEN, SKILL_SCREEN } from '../../../src/actions/types'
 
 const INITIAL_STATE = {
   index: 0,
@@ -36,6 +36,19 @@ test('navigation reducer should handle ROLE_SCREEN', () => {
     }, {
       key: expect.any(String),
       routeName: ROLE_SCREEN
+    }]
+  })
+})
+
+test('navigation reducer should handle SKILL_SCREEN', () => {
+  expect(reducer(INITIAL_STATE, { type: SKILL_SCREEN })).toEqual({
+    index: 1,
+    routes: [{
+      key: expect.any(String),
+      routeName: NAME_SCREEN
+    }, {
+      key: expect.any(String),
+      routeName: SKILL_SCREEN
     }]
   })
 })
