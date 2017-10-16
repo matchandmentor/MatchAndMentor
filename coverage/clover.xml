@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1508111855107" clover="3.2.0">
-  <project timestamp="1508111855107" name="All files">
+<coverage generated="1508172791075" clover="3.2.0">
+  <project timestamp="1508172791075" name="All files">
     <metrics statements="66" coveredstatements="66" conditionals="45" coveredconditionals="42" methods="23" coveredmethods="23" elements="134" coveredelements="131" complexity="0" loc="66" ncloc="66" packages="5" files="11" classes="11">
       <package name="MatchAndMentor">
         <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
@@ -64,11 +64,11 @@
         <file name="SignUpName.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/components/simple/SignUpName.js">
           <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="6" methods="4" coveredmethods="4"/>
           <line num="15" count="2" type="stmt"/>
-          <line num="43" count="1" type="stmt"/>
-          <line num="44" count="1" type="stmt"/>
-          <line num="47" count="1" type="stmt"/>
-          <line num="54" count="1" type="stmt"/>
-          <line num="68" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="56" count="1" type="stmt"/>
+          <line num="70" count="1" type="stmt"/>
         </file>
         <file name="SignUpRoles.js" path="/Users/sc-ktucker-osx/Desktop/ReactNative/mentor/MatchAndMentor/src/components/simple/SignUpRoles.js">
           <metrics statements="10" coveredstatements="10" conditionals="16" coveredconditionals="16" methods="5" coveredmethods="5"/>
