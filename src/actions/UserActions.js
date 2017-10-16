@@ -1,11 +1,10 @@
-import firebase from 'firebase';
+import { database, auth } from '../firebase';
 import { ROLE_SCREEN, UPDATE_NAME } from '../actions/types';
 
 export const submitName = name => {
-  const { currentUser } = firebase.auth();
+  const { currentUser } = auth;
   return dispatch => {
-    firebase
-      .database()
+    database
       .ref(`/users/${currentUser.uid}/profile`)
       .set({ name })
       .then(() => {
