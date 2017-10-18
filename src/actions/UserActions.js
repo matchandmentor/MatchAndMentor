@@ -1,5 +1,4 @@
 import { database, auth } from '../firebase';
-import { ROLE_SCREEN, UPDATE_NAME } from '../actions/types';
 import {
   ROLE_SCREEN,
   UPDATE_NAME,
