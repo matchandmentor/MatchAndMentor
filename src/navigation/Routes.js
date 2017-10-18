@@ -3,9 +3,9 @@ import RoleScreen from '../components/stateful/RoleScreen';
 import SkillScreen from '../components/stateful/SkillScreen';
 
 const Routes = {
+  SkillScreen: { screen: SkillScreen },
   NameScreen: { screen: NameScreen },
   RoleScreen: { screen: RoleScreen },
-  SkillScreen: { screen: SkillScreen },
 };
 
 export default Routes;
