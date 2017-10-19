@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1508176260178" clover="3.2.0">
-  <project timestamp="1508176260178" name="All files">
+<coverage generated="1508376247749" clover="3.2.0">
+  <project timestamp="1508376247749" name="All files">
     <metrics statements="71" coveredstatements="71" conditionals="45" coveredconditionals="42" methods="23" coveredmethods="23" elements="139" coveredelements="136" complexity="0" loc="71" ncloc="71" packages="6" files="12" classes="12">
       <package name="MatchAndMentor">
         <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
