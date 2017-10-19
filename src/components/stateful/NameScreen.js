@@ -4,7 +4,7 @@ import SignUpName from '../simple/SignUpName';
 
 const NameScreen = props => (
   <SignUpName
-    title="Your name"
+    title="Your Name"
     name={props.user.name}
     dispatch={props.dispatch}
   />

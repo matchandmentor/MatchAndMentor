@@ -25,10 +25,9 @@ export const updateName = name => ({
 });
 
 export const submitRoles = roles => {
-  const { currentUser } = firebase.auth();
+  const { currentUser } = auth;
   return dispatch => {
-    firebase
-      .database()
+    database
       .ref(`/users/${currentUser.uid}/profile`)
       .update({ roles })
       .then(() => {

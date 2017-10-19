@@ -32,10 +32,12 @@ const styles = {
     fontFamily: 'Montserrat-Regular',
   },
   inputStyle: {
-    height: 40,
+    height: 50,
     borderBottomColor: 'black',
     borderBottomWidth: Platform.OS === 'ios' ? 1 : 0,
     margin: 20,
+    fontSize: 24,
+    fontFamily: 'Montserrat-Regular',
   },
 };
 
