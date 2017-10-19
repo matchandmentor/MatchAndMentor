@@ -9,3 +9,8 @@ export const ROLES = {
 };
 export const UPDATE_MENTOR_ROLE = 'update-mentor-role';
 export const UPDATE_MENTEE_ROLE = 'update-mentee-role';
+export const SUMMARY_SCREEN = 'SummaryScreen';
+export const MENTEE_SUMMARY_SCREEN = 'MenteeSummaryScreen';
+export const UPDATE_MENTOR_SUMMARY = 'update-mentor-summary';
+export const UPDATE_MENTEE_SUMMARY = 'update-mentee-summary';
+export const PHOTO_SCREEN = 'PhotoScreen';

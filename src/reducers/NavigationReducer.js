@@ -1,6 +1,6 @@
 import { NavigationActions } from 'react-navigation';
 import { AppNavigator } from '../navigation/AppWithNavigationState';
-import { NAME_SCREEN, ROLE_SCREEN, SKILL_SCREEN } from '../actions/types';
+import { NAME_SCREEN, ROLE_SCREEN, SKILL_SCREEN, SUMMARY_SCREEN, MENTEE_SUMMARY_SCREEN, PHOTO_SCREEN, } from '../actions/types';
 
 export default (state, action) => {
   let nextState;
@@ -20,6 +20,24 @@ export default (state, action) => {
     case SKILL_SCREEN:
       nextState = AppNavigator.router.getStateForAction(
         NavigationActions.navigate({ routeName: SKILL_SCREEN }),
+        state
+      );
+      break;
+    case SUMMARY_SCREEN:
+      nextState = AppNavigator.router.getStateForAction(
+        NavigationActions.navigate({ routeName: SUMMARY_SCREEN }),
+        state
+      );
+      break;
+    case MENTEE_SUMMARY_SCREEN:
+      nextState = AppNavigator.router.getStateForAction(
+        NavigationActions.navigate({ routeName: MENTEE_SUMMARY_SCREEN }),
+        state
+      );
+      break;
+    case PHOTO_SCREEN:
+      nextState = AppNavigator.router.getStateForAction(
+        NavigationActions.navigate({ routeName: PHOTO_SCREEN }),
         state
       );
       break;
