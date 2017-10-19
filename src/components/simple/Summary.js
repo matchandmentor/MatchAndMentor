@@ -1,8 +1,12 @@
 import React from 'react';
 import { View, Text, Platform, TextInput, Keyboard } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import Button from './Button';
-import { updateMentorSummary, submitMentorSummary, updateMenteeSummary, submitMenteeSummary } from '../../actions';
+import {
+  updateMentorSummary,
+  submitMentorSummary,
+  updateMenteeSummary,
+  submitMenteeSummary,
+} from '../../actions';
 
 const styles = {
   container: {
@@ -74,30 +78,38 @@ function Summary(props) {
         />
       </View>
       <View>
-        {props.isMentor
-          ? <Button
-              style={
-                props.mentorSummary !== ''
-                  ? styles.buttonStyle
-                  : { ...styles.buttonStyle, backgroundColor: '#e9e9e9' }
-              }
-              onPress={() => submit(props.dispatch, props.isMentor, props.mentorSummary, props.loadMenteeScreenNext)}
-              disabled={props.mentorSummary === ''}
-              testID="sum-submit-button">
-              <Text style={styles.textStyle}>Continue</Text>
-            </Button>
-          : <Button
-              style={
-                props.menteeSummary !== ''
-                  ? styles.buttonStyle
-                  : { ...styles.buttonStyle, backgroundColor: '#e9e9e9' }
-              }
-              onPress={() => submit(props.dispatch, props.isMentor, props.menteeSummary)}
-              disabled={props.menteeSummary === ''}
-              testID="sum-submit-button">
-              <Text style={styles.textStyle}>Continue</Text>
-            </Button>
-      }
+        {props.isMentor ? (
+          <Button
+            style={
+              props.mentorSummary !== ''
+                ? styles.buttonStyle
+                : { ...styles.buttonStyle, backgroundColor: '#e9e9e9' }
+            }
+            onPress={() =>
+              submit(
+                props.dispatch,
+                props.isMentor,
+                props.mentorSummary,
+                props.loadMenteeScreenNext
+              )}
+            disabled={props.mentorSummary === ''}
+            testID="sum-submit-button">
+            <Text style={styles.textStyle}>Continue</Text>
+          </Button>
+        ) : (
+          <Button
+            style={
+              props.menteeSummary !== ''
+                ? styles.buttonStyle
+                : { ...styles.buttonStyle, backgroundColor: '#e9e9e9' }
+            }
+            onPress={() =>
+              submit(props.dispatch, props.isMentor, props.menteeSummary)}
+            disabled={props.menteeSummary === ''}
+            testID="sum-submit-button">
+            <Text style={styles.textStyle}>Continue</Text>
+          </Button>
+        )}
       </View>
     </View>
   );

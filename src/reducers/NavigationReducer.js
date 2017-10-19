@@ -1,6 +1,13 @@
 import { NavigationActions } from 'react-navigation';
 import { AppNavigator } from '../navigation/AppWithNavigationState';
-import { NAME_SCREEN, ROLE_SCREEN, SKILL_SCREEN, SUMMARY_SCREEN, MENTEE_SUMMARY_SCREEN, PHOTO_SCREEN, } from '../actions/types';
+import {
+  NAME_SCREEN,
+  ROLE_SCREEN,
+  SKILL_SCREEN,
+  SUMMARY_SCREEN,
+  MENTEE_SUMMARY_SCREEN,
+  PHOTO_SCREEN,
+} from '../actions/types';
 
 export default (state, action) => {
   let nextState;
