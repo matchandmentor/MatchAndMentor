@@ -1,6 +1,14 @@
 import React from 'react';
-import { View } from 'react-native';
+import { connect } from 'react-redux';
+import { View, Button } from 'react-native';
 
-const SkillScreen = () => <View />;
+const SkillScreen = props => (
+  <View>
+    <Button
+      title="go to summary"
+      onPress={() => props.navigation.navigate('SummaryScreen')}
+    />
+  </View>
+);
 
-export default SkillScreen;
+export default connect()(SkillScreen);

@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly and is a mentee 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-between",
+      "padding": 20,
+    }
+  }
+>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "black",
+          "fontFamily": "Montserrat-Light",
+          "fontSize": 24,
+        }
+      }
+    >
+      mentee summary
+    </Text>
+    <TextInput
+      maxLength={500}
+      multiline={true}
+      onChangeText={[Function]}
+      onEndEditing={[Function]}
+      onSubmitEditing={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e9e9e9",
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+          "fontFamily": "Montserrat-Light",
+          "fontSize": 24,
+          "height": "50%",
+          "margin": 20,
+          "padding": 10,
+        }
+      }
+      testID="sum-input"
+    />
+  </View>
+  <View>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#55A838",
+          "borderRadius": 10,
+          "height": 45,
+          "justifyContent": "center",
+          "margin": 20,
+        }
+      }
+      testID="sum-submit-button"
+      underlayColor="black"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "white",
+            "fontFamily": "Montserrat-Regular",
+            "fontSize": 24,
+          }
+        }
+      >
+        Continue
+      </Text>
+    </TouchableHighlight>
+  </View>
+</View>
+`;
+
+exports[`renders correctly and is a mentor 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-between",
+      "padding": 20,
+    }
+  }
+>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "black",
+          "fontFamily": "Montserrat-Light",
+          "fontSize": 24,
+        }
+      }
+    >
+      mentor summary
+    </Text>
+    <TextInput
+      maxLength={500}
+      multiline={true}
+      onChangeText={[Function]}
+      onEndEditing={[Function]}
+      onSubmitEditing={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#e9e9e9",
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+          "fontFamily": "Montserrat-Light",
+          "fontSize": 24,
+          "height": "50%",
+          "margin": 20,
+          "padding": 10,
+        }
+      }
+      testID="sum-input"
+    />
+  </View>
+  <View>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#55A838",
+          "borderRadius": 10,
+          "height": 45,
+          "justifyContent": "center",
+          "margin": 20,
+        }
+      }
+      testID="sum-submit-button"
+      underlayColor="black"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "white",
+            "fontFamily": "Montserrat-Regular",
+            "fontSize": 24,
+          }
+        }
+      >
+        Continue
+      </Text>
+    </TouchableHighlight>
+  </View>
+</View>
+`;
