@@ -14,3 +14,5 @@ export const MENTEE_SUMMARY_SCREEN = 'MenteeSummaryScreen';
 export const UPDATE_MENTOR_SUMMARY = 'update-mentor-summary';
 export const UPDATE_MENTEE_SUMMARY = 'update-mentee-summary';
 export const PHOTO_SCREEN = 'PhotoScreen';
+export const SUBMIT_MENTOR_SUMMARY = 'submit-mentor-summary';
+export const SUBMIT_MENTEE_SUMMARY = 'submit-mentee-summary';

@@ -9,6 +9,8 @@ import {
   UPDATE_MENTEE_SUMMARY,
   PHOTO_SCREEN,
   MENTEE_SUMMARY_SCREEN,
+  SUBMIT_MENTOR_SUMMARY,
+  SUBMIT_MENTEE_SUMMARY,
 } from '../actions/types';
 
 export const submitName = name => {
@@ -57,16 +59,23 @@ export const updateMentorSummary = summary => ({
 
 export const submitMentorSummary = (mentorSummary, loadMenteeScreenNext) => {
   const { currentUser } = auth;
+  if (loadMenteeScreenNext) {
+    return dispatch => {
+      database
+        .ref(`/users/${currentUser.uid}/profile`)
+        .update({ mentorSummary })
+        .then(() => {
+          dispatch({ type: MENTEE_SUMMARY_SCREEN });
+        });
+    };
+  }
   return dispatch => {
     database
       .ref(`/users/${currentUser.uid}/profile`)
-      .update({ mentorSummary })
+      .update({ mentorSummary, menteeSummary: null })
       .then(() => {
-        if (loadMenteeScreenNext) {
-          dispatch({ type: MENTEE_SUMMARY_SCREEN });
-        } else {
-          dispatch({ type: PHOTO_SCREEN });
-        }
+        dispatch({ type: SUBMIT_MENTOR_SUMMARY });
+        dispatch({ type: PHOTO_SCREEN });
       });
   };
 };
@@ -76,13 +85,25 @@ export const updateMenteeSummary = summary => ({
   payload: summary,
 });
 
-export const submitMenteeSummary = menteeSummary => {
+export const submitMenteeSummary = (menteeSummary, menteeOnly) => {
   const { currentUser } = auth;
+  if (menteeOnly) {
+    return dispatch => {
+      database
+        .ref(`/users/${currentUser.uid}/profile`)
+        .update({ menteeSummary, mentorSummary: null })
+        .then(() => {
+          dispatch({ type: SUBMIT_MENTEE_SUMMARY });
+          dispatch({ type: PHOTO_SCREEN });
+        });
+    };
+  }
   return dispatch => {
     database
       .ref(`/users/${currentUser.uid}/profile`)
       .update({ menteeSummary })
       .then(() => {
+        dispatch({ type: SUBMIT_MENTEE_SUMMARY });
         dispatch({ type: PHOTO_SCREEN });
       });
   };

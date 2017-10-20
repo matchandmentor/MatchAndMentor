@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import reducer from '../../../src/reducers/UserReducer'
 import { UPDATE_NAME, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE, UPDATE_MENTOR_SUMMARY,
-  UPDATE_MENTEE_SUMMARY } from '../../../src/actions/types'
+  UPDATE_MENTEE_SUMMARY, SUBMIT_MENTOR_SUMMARY, SUBMIT_MENTEE_SUMMARY } from '../../../src/actions/types'
 
 const INITIAL_STATE = {
   name: '',
@@ -50,5 +50,19 @@ test('user reducer should handle UPDATE_MENTEE_SUMMARY', () => {
   expect(reducer(INITIAL_STATE, { type: UPDATE_MENTEE_SUMMARY, payload: summary })).toEqual({
     ...INITIAL_STATE,
     menteeSummary: summary
+  })
+})
+
+test('user reducer should handle SUBMIT_MENTOR_SUMMARY', () => {
+  expect(reducer(INITIAL_STATE, { type: SUBMIT_MENTOR_SUMMARY })).toEqual({
+    ...INITIAL_STATE,
+    menteeSummary: ''
+  })
+})
+
+test('user reducer should handle SUBMIT_MENTEE_SUMMARY', () => {
+  expect(reducer(INITIAL_STATE, { type: SUBMIT_MENTEE_SUMMARY })).toEqual({
+    ...INITIAL_STATE,
+    mentorSummary: ''
   })
 })

@@ -45,12 +45,12 @@ const styles = {
   },
 };
 
-function submit(dispatch, isMentor, value, loadMenteeScreenNext) {
+function submit(dispatch, isMentor, value, loadMenteeScreenNext, menteeOnly) {
   Keyboard.dismiss();
   if (isMentor) {
     dispatch(submitMentorSummary(value, loadMenteeScreenNext));
   } else {
-    dispatch(submitMenteeSummary(value));
+    dispatch(submitMenteeSummary(value, menteeOnly));
   }
 }
 
@@ -104,7 +104,13 @@ function Summary(props) {
                 : { ...styles.buttonStyle, backgroundColor: '#e9e9e9' }
             }
             onPress={() =>
-              submit(props.dispatch, props.isMentor, props.menteeSummary)}
+              submit(
+                props.dispatch,
+                props.isMentor,
+                props.menteeSummary,
+                null,
+                props.menteeOnly
+              )}
             disabled={props.menteeSummary === ''}
             testID="sum-submit-button">
             <Text style={styles.textStyle}>Continue</Text>
