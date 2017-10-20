@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>32/32</span>
+        <span class='fraction'>41/41</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>17/17</span>
+        <span class='fraction'>21/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>27/27</span>
+        <span class='fraction'>36/36</span>
       </div>
     </div>
   </div>
@@ -132,7 +132,30 @@
 87
 88
 89
-90</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -193,14 +216,21 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,12 +241,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -232,6 +274,8 @@ import {
   UPDATE_MENTEE_SUMMARY,
   PHOTO_SCREEN,
   MENTEE_SUMMARY_SCREEN,
+  SUBMIT_MENTOR_SUMMARY,
+  SUBMIT_MENTEE_SUMMARY,
 } from '../actions/types';
 &nbsp;
 export const submitName = name =&gt; {
@@ -280,16 +324,23 @@ export const updateMentorSummary = summary =&gt; ({
 &nbsp;
 export const submitMentorSummary = (mentorSummary, loadMenteeScreenNext) =&gt; {
   const { currentUser } = auth;
+  if (loadMenteeScreenNext) {
+    return dispatch =&gt; {
+      database
+        .ref(`/users/${currentUser.uid}/profile`)
+        .update({ mentorSummary })
+        .then(() =&gt; {
+          dispatch({ type: MENTEE_SUMMARY_SCREEN });
+        });
+    };
+  }
   return dispatch =&gt; {
     database
       .ref(`/users/${currentUser.uid}/profile`)
-      .update({ mentorSummary })
+      .update({ mentorSummary, menteeSummary: null })
       .then(() =&gt; {
-        if (loadMenteeScreenNext) {
-          dispatch({ type: MENTEE_SUMMARY_SCREEN });
-        } else {
-          dispatch({ type: PHOTO_SCREEN });
-        }
+        dispatch({ type: SUBMIT_MENTOR_SUMMARY });
+        dispatch({ type: PHOTO_SCREEN });
       });
   };
 };
@@ -299,13 +350,25 @@ export const updateMenteeSummary = summary =&gt; ({
   payload: summary,
 });
 &nbsp;
-export const submitMenteeSummary = menteeSummary =&gt; {
+export const submitMenteeSummary = (menteeSummary, menteeOnly) =&gt; {
   const { currentUser } = auth;
+  if (menteeOnly) {
+    return dispatch =&gt; {
+      database
+        .ref(`/users/${currentUser.uid}/profile`)
+        .update({ menteeSummary, mentorSummary: null })
+        .then(() =&gt; {
+          dispatch({ type: SUBMIT_MENTEE_SUMMARY });
+          dispatch({ type: PHOTO_SCREEN });
+        });
+    };
+  }
   return dispatch =&gt; {
     database
       .ref(`/users/${currentUser.uid}/profile`)
       .update({ menteeSummary })
       .then(() =&gt; {
+        dispatch({ type: SUBMIT_MENTEE_SUMMARY });
         dispatch({ type: PHOTO_SCREEN });
       });
   };
@@ -316,7 +379,7 @@ export const submitMenteeSummary = menteeSummary =&gt; {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Oct 18 2017 22:57:45 GMT-0500 (CDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Oct 19 2017 23:33:44 GMT-0500 (CDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

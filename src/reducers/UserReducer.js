@@ -4,6 +4,8 @@ import {
   UPDATE_MENTEE_ROLE,
   UPDATE_MENTOR_SUMMARY,
   UPDATE_MENTEE_SUMMARY,
+  SUBMIT_MENTOR_SUMMARY,
+  SUBMIT_MENTEE_SUMMARY,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -31,6 +33,12 @@ export default (state = INITIAL_STATE, action) => {
     }
     case UPDATE_MENTEE_SUMMARY: {
       return { ...state, menteeSummary: action.payload };
+    }
+    case SUBMIT_MENTOR_SUMMARY: {
+      return { ...state, menteeSummary: '' };
+    }
+    case SUBMIT_MENTEE_SUMMARY: {
+      return { ...state, mentorSummary: '' };
     }
     default:
       return state;

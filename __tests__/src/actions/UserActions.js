@@ -110,9 +110,16 @@ test('updateMenteeSummary action', () => {
   expect(store.getActions()).toEqual(expectedActions)
 })
 
-test('submitMenteeSummary action', () => {
+test('submitMenteeSummary action for both mentor and mentee', () => {
   const summary = 'This is a mentee summary'
   const store = mockStore()
   store.dispatch(submitMenteeSummary(summary))
+  expect(database.ref).toBeCalled()
+})
+
+test('submitMenteeSummary action for mentor only', () => {
+  const summary = 'This is a mentee summary'
+  const store = mockStore()
+  store.dispatch(submitMenteeSummary(summary, true))
   expect(database.ref).toBeCalled()
 })
