@@ -5,6 +5,9 @@ import {
   SKILL_SCREEN,
   UPDATE_MENTOR_ROLE,
   UPDATE_MENTEE_ROLE,
+  UPDATE_SKILL_NAME,
+  UPDATE_SKILL_PROFICIENCY,
+  UPDATE_SKILL,
 } from '../actions/types';
 
 export const submitName = name => {
@@ -44,4 +47,19 @@ export const updateMentorRole = status => ({
 export const updateMenteeRole = status => ({
   type: UPDATE_MENTEE_ROLE,
   payload: status,
+});
+
+export const updateSkillName = skillName => ({
+  type: UPDATE_SKILL_NAME,
+  payload: skillName,
+});
+
+export const updateSkillProficiency = skillProficiency => ({
+  type: UPDATE_SKILL_PROFICIENCY,
+  payload: skillProficiency,
+});
+
+export const updateSkill = skill => ({
+  type: UPDATE_SKILL,
+  payload: skill,
 });
