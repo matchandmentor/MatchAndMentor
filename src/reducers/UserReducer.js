@@ -39,7 +39,7 @@ export default (state = INITIAL_STATE, action) => {
       return { ...state, skill };
     }
     case UPDATE_SKILL: {
-      const skills = [...state.skills, state.skill];
+      const skills = [...state.skills, action.payload];
       return { ...state, skills };
     }
     default:
