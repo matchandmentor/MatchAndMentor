@@ -1,42 +1,49 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import TagInput from 'react-native-tag-input';
+import { Text, View, TextInput, Button, Keyboard } from 'react-native';
+import { connect } from 'react-redux';
+import { submitName, updateSkillName } from '../../actions';
+import { updateSkillProficiency } from '../../actions/UserActions';
 
-export default class SkillScreen extends Component {
-  state = {
-    skills: [],
-  };
+const ProficiencyButton = props => {
+  return <Button title={props.proficiency} onPress={props.dispatch} />;
+};
 
-  onChangeTags = skills => {
-    this.setState({
-      skills,
-    });
-  };
-
-  labelExtractor = skill => skill;
-
+class SkillScreen extends Component {
   render() {
-    const inputProps = {
-      keyboardType: 'default',
-      placeholder: 'ex: React',
-      autoFocus: true,
-    };
-
+    const proficiencyLevels = ['1', '2', '3', '4', '5'];
     return (
-      <View style={{ flex: 1, margin: 10, marginTop: 30 }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <Text>Skills: </Text>
-          <TagInput
-            value={this.state.skills}
-            onChange={this.onChangeTags}
-            labelExtractor={this.labelExtractor}
-            tagColor="blue"
-            tagTextColor="white"
-            inputProps={inputProps}
-            maxHeight={75}
-          />
+      <View>
+        <Text>Enter a few skills. You can edit these later.</Text>
+        <TextInput
+          editable
+          maxLength={100}
+          onChangeText={skillName =>
+            this.props.dispatch(updateSkillName(skillName))}
+          onSubmitEditing={Keyboard.dismiss}
+          onEndEditing={Keyboard.dismiss}
+          placeholder={'Ex: JavaScript'}
+        />
+        <Text>Select your proficiency</Text>
+        <View>
+          {proficiencyLevels.map(level => (
+            <ProficiencyButton
+              key={level}
+              proficiency={level}
+              dispatch={() =>
+                this.props.dispatch(updateSkillProficiency(level))}
+            />
+          ))}
+          {this.props.user.skills.map(skill => (
+            <Text key={skill.name}>
+              {skill.name} {skill.proficiency}
+            </Text>
+          ))}
         </View>
       </View>
     );
   }
 }
+
+const mapStateToProps = ({ user }) => ({ user });
+
+export default connect(mapStateToProps)(SkillScreen);
