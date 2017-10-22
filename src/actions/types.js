@@ -9,3 +9,6 @@ export const ROLES = {
 };
 export const UPDATE_MENTOR_ROLE = 'update-mentor-role';
 export const UPDATE_MENTEE_ROLE = 'update-mentee-role';
+export const UPDATE_SKILL_NAME = 'UPDATE_SKILL_NAME';
+export const UPDATE_SKILL_PROFICIENCY = 'UPDATE_SKILL_PROFICIENCY';
+export const UPDATE_SKILL = 'UPDATE_SKILL';
