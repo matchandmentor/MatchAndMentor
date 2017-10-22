@@ -25,9 +25,9 @@ export const updateName = name => ({
 });
 
 export const submitRoles = roles => {
-  const { currentUser } = auth();
+  const { currentUser } = auth;
   return dispatch => {
-    database()
+    database
       .ref(`/users/${currentUser.uid}/profile`)
       .update({ roles })
       .then(() => {
