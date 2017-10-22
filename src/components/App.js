@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { auth } from '../firebase';
-import store from '../reducers/store';
+import configureStore from '../reducers/store';
 import AppWithNavigationState from '../navigation/AppWithNavigationState';
+
+const store = configureStore();
 
 export default class App extends Component {
   componentWillMount() {
