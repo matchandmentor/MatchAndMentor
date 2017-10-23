@@ -114,9 +114,9 @@ const SignUpSkills = props => {
       <View>
         <Button
           style={styles.buttonStyle}
-          title="Save skill"
-          onPress={() => props.dispatch(updateSkill(props.skill))}>
-          <Text style={styles.textStyle}>Save skill</Text>
+          title="Continue"
+          onPress={() => null}>
+          <Text style={styles.textStyle}>Continue</Text>
         </Button>
       </View>
     </View>
