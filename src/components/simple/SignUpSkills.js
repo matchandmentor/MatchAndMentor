@@ -1,12 +1,6 @@
-import React, { Component } from 'react';
-import {
-  Text,
-  View,
-  TextInput,
-  Button,
-  Keyboard,
-  Platform,
-} from 'react-native';
+import React from 'react';
+import { Text, View, TextInput, Keyboard, Platform } from 'react-native';
+import Button from './Button';
 import ScreenHeader from './ScreenHeader';
 import {
   updateSkillProficiency,
@@ -45,23 +39,14 @@ const ProficiencyButton = props => (
   <Button
     title={props.proficiency}
     onPress={props.dispatch}
-    style={{
-      flex: 0.2,
-      borderWidth: 1,
-      height: 50,
-      backgroundColor: 'powderblue',
-    }}
-  />
+    style={{ ...styles.buttonStyle, flex: 0.2 }}>
+    <Text style={styles.textStyle}>{props.proficiency}</Text>
+  </Button>
 );
 
 const SignUpSkills = props => {
   const proficiencyLevels = ['1', '2', '3', '4', '5'];
   return (
-    // done: add skill
-    // todo: as a new user, I want to click a skill I've added to edit it
-    // todo: as a new user, I want to remove a skill I've added
-    // todo: disable proficiency if no skill
-    // todo: style
     <View style={styles.container}>
       <View>
         <ScreenHeader title={props.title} />
@@ -74,7 +59,14 @@ const SignUpSkills = props => {
           onEndEditing={Keyboard.dismiss}
           placeholder={'Ex: JavaScript'}
         />
-        <View style={{ flexDirection: 'column' }}>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        />
+        <View style={{ flexDirection: 'row' }}>
           {proficiencyLevels.map(level => (
             <ProficiencyButton
               key={level}
@@ -83,19 +75,49 @@ const SignUpSkills = props => {
             />
           ))}
         </View>
-        <View>
-          <Button
-            title="Save skill"
-            onPress={() => props.dispatch(updateSkill(props.skill))}
-          />
-        </View>
-        <View>
+      </View>
+      <View>
+        <Button
+          style={styles.buttonStyle}
+          title="Save skill"
+          onPress={() => props.dispatch(updateSkill(props.skill))}>
+          <Text style={styles.textStyle}>Save skill</Text>
+        </Button>
+      </View>
+      <View>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        />
+        <View style={{ flexDirection: 'row' }}>
           {props.skills.map(skill => (
-            <Text key={skill.name}>
-              {skill.name} {skill.proficiency}
-            </Text>
+            <Button
+              key={skill.name}
+              style={{
+                ...styles.buttonStyle,
+                margin: 10,
+                flex: 0.5,
+                backgroundColor: '#333333',
+              }}
+              title="Save skill"
+              onPress={() => null}>
+              <Text style={{ ...styles.textStyle, fontSize: 16 }}>
+                {skill.name} {skill.proficiency}
+              </Text>
+            </Button>
           ))}
         </View>
+      </View>
+      <View>
+        <Button
+          style={styles.buttonStyle}
+          title="Save skill"
+          onPress={() => props.dispatch(updateSkill(props.skill))}>
+          <Text style={styles.textStyle}>Save skill</Text>
+        </Button>
       </View>
     </View>
   );
