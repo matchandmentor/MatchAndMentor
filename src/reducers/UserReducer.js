@@ -28,7 +28,7 @@ export default (state = INITIAL_STATE, action) => {
       return { ...state, menteeSelected: action.payload };
     }
     case UPDATE_SKILL_NAME: {
-      const skill = { ...state.skill, name: action.payload }
+      const skill = { ...state.skill, name: action.payload };
       return { ...state, skill };
     }
     case UPDATE_SKILL_PROFICIENCY: {
