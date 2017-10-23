@@ -13,10 +13,7 @@ const INITIAL_STATE = {
   mentorSelected: false,
   menteeSelected: false,
   skill: {},
-  skills: [
-    { name: 'testing', proficiency: 3 },
-    { name: 'testing 2', proficiency: 2 },
-  ],
+  skills: [],
 };
 
 export default (state = INITIAL_STATE, action) => {
