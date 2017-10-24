@@ -33,7 +33,49 @@ const styles = {
     borderBottomWidth: Platform.OS === 'ios' ? 1 : 0,
     margin: 20,
   },
+  skillButtonStyle: {
+    backgroundColor: '#333333',
+    margin: 5,
+    padding: 10,
+    height: 45,
+    borderRadius: 10,
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  },
+  skillButtonTextStyle: {
+    color: 'white',
+    alignSelf: 'center',
+    fontSize: 18,
+    fontFamily: 'Montserrat-Regular',
+  },
 };
+
+const SkillProficiencyBadge = props => (
+  <View
+    style={{
+      width: 30,
+      height: 30,
+      backgroundColor: '#ffffff',
+      borderRadius: 30,
+      justifyContent: 'center',
+      marginLeft: 10,
+    }}>
+    <Text
+      style={{
+        textColor: '#000000',
+        alignSelf: 'center',
+      }}>
+      {props.proficiency}
+    </Text>
+  </View>
+);
+
+const SkillButton = props => (
+  <Button style={styles.skillButtonStyle}>
+    <Text style={styles.skillButtonTextStyle}>{props.name}</Text>
+    <SkillProficiencyBadge proficiency={props.proficiency} />
+  </Button>
+);
 
 const ProficiencyButton = props => (
   <Button
@@ -84,32 +126,14 @@ const SignUpSkills = props => {
           <Text style={styles.textStyle}>Save skill</Text>
         </Button>
       </View>
-      <View>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        />
-        <View style={{ flexDirection: 'row' }}>
-          {props.skills.map(skill => (
-            <Button
-              key={skill.name}
-              style={{
-                ...styles.buttonStyle,
-                margin: 10,
-                flex: 0.5,
-                backgroundColor: '#333333',
-              }}
-              title="Save skill"
-              onPress={() => null}>
-              <Text style={{ ...styles.textStyle, fontSize: 16 }}>
-                {skill.name} {skill.proficiency}
-              </Text>
-            </Button>
-          ))}
-        </View>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+        {props.skills.map(skill => (
+          <SkillButton
+            key={skill.name}
+            name={skill.name}
+            proficiency={skill.proficiency}
+          />
+        ))}
       </View>
       <View>
         <Button
