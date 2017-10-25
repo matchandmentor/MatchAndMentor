@@ -1,8 +1,9 @@
 import { database, auth } from '../firebase';
 import {
   ROLE_SCREEN,
-  UPDATE_NAME,
+  NAME_SCREEN,
   SKILL_SCREEN,
+  UPDATE_NAME,
   UPDATE_MENTOR_ROLE,
   UPDATE_MENTEE_ROLE,
   UPDATE_SKILL_NAME,
@@ -63,3 +64,15 @@ export const updateSkill = skill => ({
   type: UPDATE_SKILL,
   payload: skill,
 });
+
+export const setProficiencyAndSaveSkill = proficiency => (
+  dispatch,
+  getState
+) => {
+  dispatch(updateSkillProficiency(proficiency));
+  dispatch(updateSkill(getState().user.skill));
+};
+
+export const submitSkills = () => dispatch => {
+  dispatch({ type: NAME_SCREEN });
+};

@@ -2,11 +2,7 @@ import React from 'react';
 import { Text, View, TextInput, Keyboard, Platform } from 'react-native';
 import Button from './Button';
 import ScreenHeader from './ScreenHeader';
-import {
-  updateSkillProficiency,
-  updateSkillName,
-  updateSkill,
-} from '../../actions';
+import { updateSkillName, setProficiencyAndSaveSkill, submitSkills } from '../../actions';
 
 const styles = {
   container: {
@@ -118,14 +114,6 @@ const SignUpSkills = props => {
           ))}
         </View>
       </View>
-      <View>
-        <Button
-          style={styles.buttonStyle}
-          title="Save skill"
-          onPress={() => props.dispatch(updateSkill(props.skill))}>
-          <Text style={styles.textStyle}>Save skill</Text>
-        </Button>
-      </View>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
         {props.skills.map(skill => (
           <SkillButton
@@ -135,14 +123,19 @@ const SignUpSkills = props => {
           />
         ))}
       </View>
-      <View>
+      <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={64}>
         <Button
-          style={styles.buttonStyle}
-          title="Continue"
-          onPress={() => null}>
+          style={
+            props.skills !== null && props.skills.length > 0
+              ? styles.buttonStyle
+              : { ...styles.buttonStyle, backgroundColor: '#e9e9e9' }
+          }
+          onPress={() => props.dispatch(submitSkills())}
+          disabled={props.name === null || props.name === ''}
+          testID="name-submit-button">
           <Text style={styles.textStyle}>Continue</Text>
         </Button>
-      </View>
+      </KeyboardAvoidingView>
     </View>
   );
 };
