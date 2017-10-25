@@ -1,41 +1,30 @@
 /* eslint-env jest */
 'use strict'
-import { submitName, updateName, updateMentorRole, updateMenteeRole, submitRoles } from '../../../src/actions'
+import { submitName, updateName, updateMentorRole, updateMenteeRole, submitRoles, updateMentorSummary,
+  submitMentorSummary, updateMenteeSummary, submitMenteeSummary } from '../../../src/actions'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { UPDATE_NAME, UPDATE_ROLES, SKILL_SCREEN, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE } from '../../../src/actions/types'
-import firebase from 'firebase'
+import { UPDATE_NAME, UPDATE_ROLES, SKILL_SCREEN, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE,
+  UPDATE_MENTOR_SUMMARY, UPDATE_MENTEE_SUMMARY } from '../../../src/actions/types'
+import { database } from '../../../src/firebase'
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyAsjC_abpWmFCYmNoQl257nc807hHE_gsY',
-  authDomain: 'matchandmentorapp.firebaseapp.com',
-  databaseURL: 'https://matchandmentorapp.firebaseio.com',
-  projectId: 'matchandmentorapp',
-  storageBucket: 'matchandmentorapp.appspot.com',
-  messagingSenderId: '1068797055216'
-})
-jest.genMockFromModule('firebase')
-
-const ref = jest.fn(() => {
+jest.mock('../../../src/firebase', () => {
   return {
-    update: jest.fn().mockImplementation(() => {
-      return Promise.resolve()
-    })
-  }
-})
-
-firebase.auth = jest.fn().mockImplementation(() => {
-  return {
-    currentUser: { uid: '123' }
-  }
-})
-firebase.initializeApp = jest.fn()
-firebase.database = jest.fn(() => {
-  return {
-    ref: ref
+    auth: {
+      currentUser: { uid: '123' }
+    },
+    database: {
+      ref: jest.fn(() => {
+        return {
+          update: jest.fn().mockImplementation(() => {
+            return Promise.resolve()
+          })
+        }
+      })
+    }
   }
 })
 
@@ -58,7 +47,7 @@ test('updateName action', () => {
 test('submitName action', () => {
   const store = mockStore()
   store.dispatch(submitName('name'))
-  expect(firebase.database).toBeCalled()
+  expect(database.ref).toBeCalled()
 })
 
 test('updateMentorRole action', () => {
@@ -84,5 +73,53 @@ test('updateMenteeRole action', () => {
 test('submitRoles action', () => {
   const store = mockStore()
   store.dispatch(submitRoles('MENTOR_ONLY'))
-  expect(firebase.database).toBeCalled()
+  expect(database.ref).toBeCalled()
+})
+
+test('updateMentorSummary action', () => {
+  const summary = 'This is a mentor summary'
+  const expectedActions = [
+    { type: UPDATE_MENTOR_SUMMARY, payload: summary }
+  ]
+  const store = mockStore()
+  store.dispatch(updateMentorSummary(summary))
+  expect(store.getActions()).toEqual(expectedActions)
+})
+
+test('submitMentorSummary action and show mentee summary screen', () => {
+  const summary = 'This is a mentor summary'
+  const store = mockStore()
+  store.dispatch(submitMentorSummary(summary, true))
+  expect(database.ref).toBeCalled()
+})
+
+test('submitMentorSummary action and show photo screen', () => {
+  const summary = 'This is a mentor summary'
+  const store = mockStore()
+  store.dispatch(submitMentorSummary(summary, false))
+  expect(database.ref).toBeCalled()
+})
+
+test('updateMenteeSummary action', () => {
+  const summary = 'This is a mentee summary'
+  const expectedActions = [
+    { type: UPDATE_MENTEE_SUMMARY, payload: summary }
+  ]
+  const store = mockStore()
+  store.dispatch(updateMenteeSummary(summary))
+  expect(store.getActions()).toEqual(expectedActions)
+})
+
+test('submitMenteeSummary action for both mentor and mentee', () => {
+  const summary = 'This is a mentee summary'
+  const store = mockStore()
+  store.dispatch(submitMenteeSummary(summary))
+  expect(database.ref).toBeCalled()
+})
+
+test('submitMenteeSummary action for mentor only', () => {
+  const summary = 'This is a mentee summary'
+  const store = mockStore()
+  store.dispatch(submitMenteeSummary(summary, true))
+  expect(database.ref).toBeCalled()
 })

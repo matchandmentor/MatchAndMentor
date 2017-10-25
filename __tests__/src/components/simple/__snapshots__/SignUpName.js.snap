@@ -55,7 +55,9 @@ exports[`renders correctly 1`] = `
         Object {
           "borderBottomColor": "black",
           "borderBottomWidth": 1,
-          "height": 40,
+          "fontFamily": "Montserrat-Regular",
+          "fontSize": 24,
+          "height": 50,
           "margin": 20,
         }
       }

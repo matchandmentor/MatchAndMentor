@@ -7,14 +7,16 @@ import renderer from 'react-test-renderer'
 import { findById } from '../../../../setupTests'
 import firebase from 'firebase'
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyAsjC_abpWmFCYmNoQl257nc807hHE_gsY',
-  authDomain: 'matchandmentorapp.firebaseapp.com',
-  databaseURL: 'https://matchandmentorapp.firebaseio.com',
-  projectId: 'matchandmentorapp',
-  storageBucket: 'matchandmentorapp.appspot.com',
-  messagingSenderId: '1068797055216'
-})
+if (!firebase.apps.length) {
+  firebase.initializeApp({
+    apiKey: 'AIzaSyAsjC_abpWmFCYmNoQl257nc807hHE_gsY',
+    authDomain: 'matchandmentorapp.firebaseapp.com',
+    databaseURL: 'https://matchandmentorapp.firebaseio.com',
+    projectId: 'matchandmentorapp',
+    storageBucket: 'matchandmentorapp.appspot.com',
+    messagingSenderId: '1068797055216'
+  })
+}
 
 jest.mock('TouchableOpacity', () => {
   const mockComponent = require('jest-react-native')

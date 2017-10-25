@@ -1,12 +1,20 @@
 /* eslint-env jest */
 import reducer from '../../../src/reducers/UserReducer'
-import { UPDATE_NAME, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE, UPDATE_SKILL_NAME, UPDATE_SKILL_PROFICIENCY, UPDATE_SKILL } from '../../../src/actions/types'
+import {
+  UPDATE_NAME,
+  UPDATE_MENTOR_ROLE,
+  UPDATE_MENTEE_ROLE,
+  UPDATE_MENTOR_SUMMARY,
+  UPDATE_MENTEE_SUMMARY, SUBMIT_MENTOR_SUMMARY, SUBMIT_MENTEE_SUMMARY,
+  UPDATE_SKILL_NAME, UPDATE_SKILL_PROFICIENCY, UPDATE_SKILL } from '../../../src/actions/types'
 
 const INITIAL_STATE = {
   name: '',
   roles: null,
   mentorSelected: false,
   menteeSelected: false,
+  mentorSummary: '',
+  menteeSummary: '',
   skill: {},
   skills: [],
 };
@@ -33,6 +41,36 @@ test('user reducer should handle UPDATE_MENTEE_ROLE', () => {
   expect(reducer(INITIAL_STATE, { type: UPDATE_MENTEE_ROLE, payload: true })).toEqual({
     ...INITIAL_STATE,
     menteeSelected: true
+  })
+})
+
+test('user reducer should handle UPDATE_MENTOR_SUMMARY', () => {
+  const summary = 'this is a mentor summary'
+  expect(reducer(INITIAL_STATE, { type: UPDATE_MENTOR_SUMMARY, payload: summary })).toEqual({
+    ...INITIAL_STATE,
+    mentorSummary: summary
+  })
+})
+
+test('user reducer should handle UPDATE_MENTEE_SUMMARY', () => {
+  const summary = 'this is a mentee summary'
+  expect(reducer(INITIAL_STATE, { type: UPDATE_MENTEE_SUMMARY, payload: summary })).toEqual({
+    ...INITIAL_STATE,
+    menteeSummary: summary
+  })
+})
+
+test('user reducer should handle SUBMIT_MENTOR_SUMMARY', () => {
+  expect(reducer(INITIAL_STATE, { type: SUBMIT_MENTOR_SUMMARY })).toEqual({
+    ...INITIAL_STATE,
+    menteeSummary: ''
+  })
+})
+
+test('user reducer should handle SUBMIT_MENTEE_SUMMARY', () => {
+  expect(reducer(INITIAL_STATE, { type: SUBMIT_MENTEE_SUMMARY })).toEqual({
+    ...INITIAL_STATE,
+    mentorSummary: ''
   })
 })
 
