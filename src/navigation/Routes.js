@@ -4,8 +4,8 @@ import SkillScreen from '../components/stateful/SkillScreen';
 
 const Routes = {
   NameScreen: { screen: NameScreen },
-  SkillScreen: { screen: SkillScreen },
   RoleScreen: { screen: RoleScreen },
+  SkillScreen: { screen: SkillScreen },
 };
 
 export default Routes;
