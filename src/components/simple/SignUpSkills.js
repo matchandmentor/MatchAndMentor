@@ -1,8 +1,19 @@
 import React from 'react';
-import { Text, View, TextInput, Keyboard, Platform } from 'react-native';
+import {
+  Text,
+  View,
+  TextInput,
+  Keyboard,
+  Platform,
+  KeyboardAvoidingView,
+} from 'react-native';
 import Button from './Button';
 import ScreenHeader from './ScreenHeader';
-import { updateSkillName, setProficiencyAndSaveSkill, submitSkills } from '../../actions';
+import {
+  updateSkillName,
+  setProficiencyAndSaveSkill,
+  submitSkills,
+} from '../../actions';
 
 const styles = {
   container: {
@@ -58,7 +69,7 @@ const SkillProficiencyBadge = props => (
     }}>
     <Text
       style={{
-        textColor: '#000000',
+        color: '#000000',
         alignSelf: 'center',
       }}>
       {props.proficiency}
@@ -67,7 +78,7 @@ const SkillProficiencyBadge = props => (
 );
 
 const SkillButton = props => (
-  <Button style={styles.skillButtonStyle}>
+  <Button style={styles.skillButtonStyle} onPress={() => null}>
     <Text style={styles.skillButtonTextStyle}>{props.name}</Text>
     <SkillProficiencyBadge proficiency={props.proficiency} />
   </Button>
@@ -109,7 +120,9 @@ const SignUpSkills = props => {
             <ProficiencyButton
               key={level}
               proficiency={level}
-              dispatch={() => props.dispatch(updateSkillProficiency(level))}
+              dispatch={() => {
+                props.dispatch(setProficiencyAndSaveSkill(level));
+              }}
             />
           ))}
         </View>
