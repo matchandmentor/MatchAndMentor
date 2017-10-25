@@ -93,6 +93,11 @@ const ProficiencyButton = props => (
   </Button>
 );
 
+function submit(dispatch) {
+  Keyboard.dismiss();
+  dispatch(submitSkills())
+}
+
 const SignUpSkills = props => {
   const proficiencyLevels = ['1', '2', '3', '4', '5'];
   return (
@@ -107,6 +112,7 @@ const SignUpSkills = props => {
           onSubmitEditing={Keyboard.dismiss}
           onEndEditing={Keyboard.dismiss}
           placeholder={'Ex: JavaScript'}
+          testID="skill-name-input"
         />
         <View
           style={{
@@ -143,9 +149,9 @@ const SignUpSkills = props => {
               ? styles.buttonStyle
               : { ...styles.buttonStyle, backgroundColor: '#e9e9e9' }
           }
-          onPress={() => props.dispatch(submitSkills())}
+          onPress={() => submit(props.dispatch)}
           disabled={props.name === null || props.name === ''}
-          testID="name-submit-button">
+          testID="skills-submit-button">
           <Text style={styles.textStyle}>Continue</Text>
         </Button>
       </KeyboardAvoidingView>
