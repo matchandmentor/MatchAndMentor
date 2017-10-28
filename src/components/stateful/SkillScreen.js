@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { View, Button } from 'react-native';
+import SignUpSkills from '../simple/SignUpSkills';
 
 const SkillScreen = props => (
-  <View>
-    <Button
-      title="go to summary"
-      onPress={() => props.navigation.navigate('SummaryScreen')}
-    />
-  </View>
+  <SignUpSkills
+    title="Your skills"
+    skill={props.user.skill}
+    skills={props.user.skills}
+    dispatch={props.dispatch}
+  />
 );
 
-export default connect()(SkillScreen);
+const mapStateToProps = ({ user }) => ({ user });
+
+export default connect(mapStateToProps)(SkillScreen);

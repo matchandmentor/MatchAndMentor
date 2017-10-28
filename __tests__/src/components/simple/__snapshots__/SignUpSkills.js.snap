@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "margin": 20,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Montserrat-SemiBold",
+            "fontSize": 28,
+          }
+        }
+      />
+    </View>
+    <TextInput
+      editable={true}
+      maxLength={100}
+      onChangeText={[Function]}
+      onEndEditing={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder="Ex: JavaScript"
+      style={
+        Object {
+          "borderBottomColor": "black",
+          "borderBottomWidth": 1,
+          "height": 40,
+          "margin": 20,
+        }
+      }
+      testID="skill-name-input"
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <TouchableHighlight
+        activeOpacity={0.85}
+        disabled={undefined}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#55A838",
+            "borderRadius": 10,
+            "flex": 0.2,
+            "height": 45,
+            "justifyContent": "center",
+            "margin": 20,
+          }
+        }
+        testID={undefined}
+        underlayColor="black"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontFamily": "Montserrat-Regular",
+              "fontSize": 24,
+            }
+          }
+        >
+          1
+        </Text>
+      </TouchableHighlight>
+      <TouchableHighlight
+        activeOpacity={0.85}
+        disabled={undefined}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#55A838",
+            "borderRadius": 10,
+            "flex": 0.2,
+            "height": 45,
+            "justifyContent": "center",
+            "margin": 20,
+          }
+        }
+        testID={undefined}
+        underlayColor="black"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontFamily": "Montserrat-Regular",
+              "fontSize": 24,
+            }
+          }
+        >
+          2
+        </Text>
+      </TouchableHighlight>
+      <TouchableHighlight
+        activeOpacity={0.85}
+        disabled={undefined}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#55A838",
+            "borderRadius": 10,
+            "flex": 0.2,
+            "height": 45,
+            "justifyContent": "center",
+            "margin": 20,
+          }
+        }
+        testID={undefined}
+        underlayColor="black"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontFamily": "Montserrat-Regular",
+              "fontSize": 24,
+            }
+          }
+        >
+          3
+        </Text>
+      </TouchableHighlight>
+      <TouchableHighlight
+        activeOpacity={0.85}
+        disabled={undefined}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#55A838",
+            "borderRadius": 10,
+            "flex": 0.2,
+            "height": 45,
+            "justifyContent": "center",
+            "margin": 20,
+          }
+        }
+        testID={undefined}
+        underlayColor="black"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontFamily": "Montserrat-Regular",
+              "fontSize": 24,
+            }
+          }
+        >
+          4
+        </Text>
+      </TouchableHighlight>
+      <TouchableHighlight
+        activeOpacity={0.85}
+        disabled={undefined}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#55A838",
+            "borderRadius": 10,
+            "flex": 0.2,
+            "height": 45,
+            "justifyContent": "center",
+            "margin": 20,
+          }
+        }
+        testID={undefined}
+        underlayColor="black"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontFamily": "Montserrat-Regular",
+              "fontSize": 24,
+            }
+          }
+        >
+          5
+        </Text>
+      </TouchableHighlight>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={undefined}
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#333333",
+          "borderRadius": 10,
+          "flexWrap": "wrap",
+          "height": 45,
+          "justifyContent": "center",
+          "margin": 5,
+          "padding": 10,
+        }
+      }
+      testID={undefined}
+      underlayColor="black"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "white",
+            "fontFamily": "Montserrat-Regular",
+            "fontSize": 18,
+          }
+        }
+      >
+        test
+      </Text>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderRadius": 30,
+            "height": 30,
+            "justifyContent": "center",
+            "marginLeft": 10,
+            "width": 30,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#000000",
+            }
+          }
+        >
+          1
+        </Text>
+      </View>
+    </TouchableHighlight>
+  </View>
+  <View
+    keyboardVerticalOffset={64}
+    onLayout={[Function]}
+    style={
+      Array [
+        undefined,
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#55A838",
+          "borderRadius": 10,
+          "height": 45,
+          "justifyContent": "center",
+          "margin": 20,
+        }
+      }
+      testID="skills-submit-button"
+      underlayColor="black"
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "white",
+            "fontFamily": "Montserrat-Regular",
+            "fontSize": 24,
+          }
+        }
+      >
+        Continue
+      </Text>
+    </TouchableHighlight>
+  </View>
+</View>
+`;

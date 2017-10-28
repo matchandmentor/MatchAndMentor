@@ -16,3 +16,6 @@ export const UPDATE_MENTEE_SUMMARY = 'update-mentee-summary';
 export const PHOTO_SCREEN = 'PhotoScreen';
 export const SUBMIT_MENTOR_SUMMARY = 'submit-mentor-summary';
 export const SUBMIT_MENTEE_SUMMARY = 'submit-mentee-summary';
+export const UPDATE_SKILL_NAME = 'UPDATE_SKILL_NAME';
+export const UPDATE_SKILL_PROFICIENCY = 'UPDATE_SKILL_PROFICIENCY';
+export const UPDATE_SKILL = 'UPDATE_SKILL';
