@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import reducer from '../../../src/reducers/NavigationReducer'
 import { NAME_SCREEN, ROLE_SCREEN, SKILL_SCREEN, SUMMARY_SCREEN,
-  MENTEE_SUMMARY_SCREEN, PHOTO_SCREEN } from '../../../src/actions/types'
+  MENTEE_SUMMARY_SCREEN, PHOTO_SCREEN, BIRTHDAY_SCREEN } from '../../../src/actions/types'
 
 const INITIAL_STATE = {
   index: 0,
@@ -89,6 +89,19 @@ test('navigation reducer should handle PHOTO_SCREEN', () => {
     }, {
       key: expect.any(String),
       routeName: PHOTO_SCREEN
+    }]
+  })
+})
+
+test('navigation reducer should handle BIRTHDAY_SCREEN', () => {
+  expect(reducer(INITIAL_STATE, { type: BIRTHDAY_SCREEN })).toEqual({
+    index: 1,
+    routes: [{
+      key: expect.any(String),
+      routeName: NAME_SCREEN
+    }, {
+      key: expect.any(String),
+      routeName: BIRTHDAY_SCREEN
     }]
   })
 })

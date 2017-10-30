@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import reducer from '../../../src/reducers/UserReducer'
 import { UPDATE_NAME, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE, UPDATE_MENTOR_SUMMARY,
-  UPDATE_MENTEE_SUMMARY, SUBMIT_MENTOR_SUMMARY, SUBMIT_MENTEE_SUMMARY } from '../../../src/actions/types'
+  UPDATE_MENTEE_SUMMARY, SUBMIT_MENTOR_SUMMARY, SUBMIT_MENTEE_SUMMARY, UPDATE_BIRTHDAY } from '../../../src/actions/types'
 
 const INITIAL_STATE = {
   name: '',
@@ -10,6 +10,7 @@ const INITIAL_STATE = {
   menteeSelected: false,
   mentorSummary: '',
   menteeSummary: '',
+  birthday: '',
 };
 
 test('user reducer should return intial state', () => {
@@ -64,5 +65,12 @@ test('user reducer should handle SUBMIT_MENTEE_SUMMARY', () => {
   expect(reducer(INITIAL_STATE, { type: SUBMIT_MENTEE_SUMMARY })).toEqual({
     ...INITIAL_STATE,
     mentorSummary: ''
+  })
+})
+
+test('user reducer should handle UPDATE_BIRTHDAY', () => {
+  expect(reducer(INITIAL_STATE, { type: UPDATE_BIRTHDAY, payload: '01/01/2000' })).toEqual({
+    ...INITIAL_STATE,
+    birthday: '01/01/2000'
   })
 })

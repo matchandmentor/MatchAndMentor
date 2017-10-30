@@ -7,6 +7,7 @@ import {
   SUMMARY_SCREEN,
   MENTEE_SUMMARY_SCREEN,
   PHOTO_SCREEN,
+  BIRTHDAY_SCREEN,
 } from '../actions/types';
 
 export default (state, action) => {
@@ -45,6 +46,12 @@ export default (state, action) => {
     case PHOTO_SCREEN:
       nextState = AppNavigator.router.getStateForAction(
         NavigationActions.navigate({ routeName: PHOTO_SCREEN }),
+        state
+      );
+      break;
+    case BIRTHDAY_SCREEN:
+      nextState = AppNavigator.router.getStateForAction(
+        NavigationActions.navigate({ routeName: BIRTHDAY_SCREEN }),
         state
       );
       break;
