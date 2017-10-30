@@ -11,6 +11,8 @@ import {
   MENTEE_SUMMARY_SCREEN,
   SUBMIT_MENTOR_SUMMARY,
   SUBMIT_MENTEE_SUMMARY,
+  BIRTHDAY_SCREEN,
+  UPDATE_BIRTHDAY,
 } from '../actions/types';
 
 export const submitName = name => {
@@ -37,7 +39,7 @@ export const submitRoles = roles => {
       .ref(`/users/${currentUser.uid}/profile`)
       .update({ roles })
       .then(() => {
-        dispatch({ type: SKILL_SCREEN });
+        dispatch({ type: BIRTHDAY_SCREEN });
       });
   };
 };
@@ -105,6 +107,23 @@ export const submitMenteeSummary = (menteeSummary, menteeOnly) => {
       .then(() => {
         dispatch({ type: SUBMIT_MENTEE_SUMMARY });
         dispatch({ type: PHOTO_SCREEN });
+      });
+  };
+};
+
+export const updateBirthday = birthday => ({
+  type: UPDATE_BIRTHDAY,
+  payload: birthday,
+});
+
+export const submitBirthday = birthday => {
+  const { currentUser } = auth;
+  return dispatch => {
+    database
+      .ref(`/users/${currentUser.uid}/profile`)
+      .update({ birthday })
+      .then(() => {
+        dispatch({ type: SKILL_SCREEN });
       });
   };
 };

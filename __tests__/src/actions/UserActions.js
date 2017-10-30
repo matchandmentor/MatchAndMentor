@@ -1,11 +1,11 @@
 /* eslint-env jest */
 'use strict'
 import { submitName, updateName, updateMentorRole, updateMenteeRole, submitRoles, updateMentorSummary,
-  submitMentorSummary, updateMenteeSummary, submitMenteeSummary } from '../../../src/actions'
+  submitMentorSummary, updateMenteeSummary, submitMenteeSummary, updateBirthday, submitBirthday } from '../../../src/actions'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import { UPDATE_NAME, UPDATE_ROLES, SKILL_SCREEN, UPDATE_MENTOR_ROLE, UPDATE_MENTEE_ROLE,
-  UPDATE_MENTOR_SUMMARY, UPDATE_MENTEE_SUMMARY } from '../../../src/actions/types'
+  UPDATE_MENTOR_SUMMARY, UPDATE_MENTEE_SUMMARY, UPDATE_BIRTHDAY } from '../../../src/actions/types'
 import { database } from '../../../src/firebase'
 
 const middlewares = [thunk]
@@ -121,5 +121,22 @@ test('submitMenteeSummary action for mentor only', () => {
   const summary = 'This is a mentee summary'
   const store = mockStore()
   store.dispatch(submitMenteeSummary(summary, true))
+  expect(database.ref).toBeCalled()
+})
+
+test('updateBirthday action', () => {
+  const birthday = '01/01/2000'
+  const expectedActions = [
+    { type: UPDATE_BIRTHDAY, payload: birthday }
+  ]
+  const store = mockStore()
+  store.dispatch(updateBirthday(birthday))
+  expect(store.getActions()).toEqual(expectedActions)
+})
+
+test('submitBirthday action for mentor only', () => {
+  const birthday = '01/01/2000'
+  const store = mockStore()
+  store.dispatch(submitBirthday(birthday, true))
   expect(database.ref).toBeCalled()
 })

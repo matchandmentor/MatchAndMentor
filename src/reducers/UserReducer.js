@@ -6,6 +6,7 @@ import {
   UPDATE_MENTEE_SUMMARY,
   SUBMIT_MENTOR_SUMMARY,
   SUBMIT_MENTEE_SUMMARY,
+  UPDATE_BIRTHDAY,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -15,6 +16,7 @@ const INITIAL_STATE = {
   menteeSelected: false,
   mentorSummary: '',
   menteeSummary: '',
+  birthday: '',
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -39,6 +41,9 @@ export default (state = INITIAL_STATE, action) => {
     }
     case SUBMIT_MENTEE_SUMMARY: {
       return { ...state, mentorSummary: '' };
+    }
+    case UPDATE_BIRTHDAY: {
+      return { ...state, birthday: action.payload };
     }
     default:
       return state;
