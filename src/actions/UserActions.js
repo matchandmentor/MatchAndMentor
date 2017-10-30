@@ -23,6 +23,9 @@ export const submitName = name => {
       .update({ name })
       .then(() => {
         dispatch({ type: ROLE_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };
@@ -40,6 +43,9 @@ export const submitRoles = roles => {
       .update({ roles })
       .then(() => {
         dispatch({ type: BIRTHDAY_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };
@@ -68,6 +74,9 @@ export const submitMentorSummary = (mentorSummary, loadMenteeScreenNext) => {
         .update({ mentorSummary })
         .then(() => {
           dispatch({ type: MENTEE_SUMMARY_SCREEN });
+        })
+        .catch(error => {
+          console.log(error);
         });
     };
   }
@@ -78,6 +87,9 @@ export const submitMentorSummary = (mentorSummary, loadMenteeScreenNext) => {
       .then(() => {
         dispatch({ type: SUBMIT_MENTOR_SUMMARY });
         dispatch({ type: PHOTO_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };
@@ -97,6 +109,9 @@ export const submitMenteeSummary = (menteeSummary, menteeOnly) => {
         .then(() => {
           dispatch({ type: SUBMIT_MENTEE_SUMMARY });
           dispatch({ type: PHOTO_SCREEN });
+        })
+        .catch(error => {
+          console.log(error);
         });
     };
   }
@@ -107,6 +122,9 @@ export const submitMenteeSummary = (menteeSummary, menteeOnly) => {
       .then(() => {
         dispatch({ type: SUBMIT_MENTEE_SUMMARY });
         dispatch({ type: PHOTO_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };
@@ -124,6 +142,9 @@ export const submitBirthday = birthday => {
       .update({ birthday })
       .then(() => {
         dispatch({ type: SKILL_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };
