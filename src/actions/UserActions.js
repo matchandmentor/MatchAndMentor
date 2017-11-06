@@ -12,6 +12,8 @@ import {
   MENTEE_SUMMARY_SCREEN,
   SUBMIT_MENTOR_SUMMARY,
   SUBMIT_MENTEE_SUMMARY,
+  BIRTHDAY_SCREEN,
+  UPDATE_BIRTHDAY,
   UPDATE_SKILL_NAME,
   UPDATE_SKILL_PROFICIENCY,
   UPDATE_SKILL,
@@ -25,6 +27,9 @@ export const submitName = name => {
       .update({ name })
       .then(() => {
         dispatch({ type: ROLE_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };
@@ -41,7 +46,10 @@ export const submitRoles = roles => {
       .ref(`/users/${currentUser.uid}/profile`)
       .update({ roles })
       .then(() => {
-        dispatch({ type: SKILL_SCREEN });
+        dispatch({ type: BIRTHDAY_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };
@@ -70,6 +78,9 @@ export const submitMentorSummary = (mentorSummary, loadMenteeScreenNext) => {
         .update({ mentorSummary })
         .then(() => {
           dispatch({ type: MENTEE_SUMMARY_SCREEN });
+        })
+        .catch(error => {
+          console.log(error);
         });
     };
   }
@@ -80,6 +91,9 @@ export const submitMentorSummary = (mentorSummary, loadMenteeScreenNext) => {
       .then(() => {
         dispatch({ type: SUBMIT_MENTOR_SUMMARY });
         dispatch({ type: PHOTO_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };
@@ -99,6 +113,9 @@ export const submitMenteeSummary = (menteeSummary, menteeOnly) => {
         .then(() => {
           dispatch({ type: SUBMIT_MENTEE_SUMMARY });
           dispatch({ type: PHOTO_SCREEN });
+        })
+        .catch(error => {
+          console.log(error);
         });
     };
   }
@@ -109,6 +126,29 @@ export const submitMenteeSummary = (menteeSummary, menteeOnly) => {
       .then(() => {
         dispatch({ type: SUBMIT_MENTEE_SUMMARY });
         dispatch({ type: PHOTO_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+};
+
+export const updateBirthday = birthday => ({
+  type: UPDATE_BIRTHDAY,
+  payload: birthday,
+});
+
+export const submitBirthday = birthday => {
+  const { currentUser } = auth;
+  return dispatch => {
+    database
+      .ref(`/users/${currentUser.uid}/profile`)
+      .update({ birthday })
+      .then(() => {
+        dispatch({ type: SKILL_SCREEN });
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 };

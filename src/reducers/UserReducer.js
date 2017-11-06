@@ -9,6 +9,7 @@ import {
   UPDATE_SKILL_NAME,
   UPDATE_SKILL_PROFICIENCY,
   UPDATE_SKILL,
+  UPDATE_BIRTHDAY,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -20,6 +21,7 @@ const INITIAL_STATE = {
   menteeSummary: '',
   skill: {},
   skills: [],
+  birthday: '',
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -56,6 +58,9 @@ export default (state = INITIAL_STATE, action) => {
     case UPDATE_SKILL: {
       const skills = [...state.skills, action.payload];
       return { ...state, skills };
+    }
+    case UPDATE_BIRTHDAY: {
+      return { ...state, birthday: action.payload };
     }
     default:
       return state;

@@ -19,3 +19,5 @@ export const SUBMIT_MENTEE_SUMMARY = 'submit-mentee-summary';
 export const UPDATE_SKILL_NAME = 'UPDATE_SKILL_NAME';
 export const UPDATE_SKILL_PROFICIENCY = 'UPDATE_SKILL_PROFICIENCY';
 export const UPDATE_SKILL = 'UPDATE_SKILL';
+export const BIRTHDAY_SCREEN = 'BirthdayScreen';
+export const UPDATE_BIRTHDAY = 'update-birthday';
