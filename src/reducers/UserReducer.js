@@ -6,6 +6,9 @@ import {
   UPDATE_MENTEE_SUMMARY,
   SUBMIT_MENTOR_SUMMARY,
   SUBMIT_MENTEE_SUMMARY,
+  UPDATE_SKILL_NAME,
+  UPDATE_SKILL_PROFICIENCY,
+  UPDATE_SKILL,
   UPDATE_BIRTHDAY,
 } from '../actions/types';
 
@@ -16,6 +19,8 @@ const INITIAL_STATE = {
   menteeSelected: false,
   mentorSummary: '',
   menteeSummary: '',
+  skill: {},
+  skills: [],
   birthday: '',
 };
 
@@ -41,6 +46,18 @@ export default (state = INITIAL_STATE, action) => {
     }
     case SUBMIT_MENTEE_SUMMARY: {
       return { ...state, mentorSummary: '' };
+    }
+    case UPDATE_SKILL_NAME: {
+      const skill = { ...state.skill, name: action.payload };
+      return { ...state, skill };
+    }
+    case UPDATE_SKILL_PROFICIENCY: {
+      const skill = { ...state.skill, proficiency: action.payload };
+      return { ...state, skill };
+    }
+    case UPDATE_SKILL: {
+      const skills = [...state.skills, action.payload];
+      return { ...state, skills };
     }
     case UPDATE_BIRTHDAY: {
       return { ...state, birthday: action.payload };

@@ -247,8 +247,8 @@ exports[`renders correctly 1`] = `
                     >
                       <RCTDatePicker
                         date={946706400000}
-                        maximumDate={1509328105365}
-                        minimumDate={-1649012400000}
+                        maximumDate={1509930391379}
+                        minimumDate={-1646334000000}
                         minuteInterval={undefined}
                         mode="date"
                         onChange={[Function]}

@@ -1,8 +1,9 @@
 import { database, auth } from '../firebase';
 import {
   ROLE_SCREEN,
-  UPDATE_NAME,
+  NAME_SCREEN,
   SKILL_SCREEN,
+  UPDATE_NAME,
   UPDATE_MENTOR_ROLE,
   UPDATE_MENTEE_ROLE,
   UPDATE_MENTOR_SUMMARY,
@@ -13,6 +14,9 @@ import {
   SUBMIT_MENTEE_SUMMARY,
   BIRTHDAY_SCREEN,
   UPDATE_BIRTHDAY,
+  UPDATE_SKILL_NAME,
+  UPDATE_SKILL_PROFICIENCY,
+  UPDATE_SKILL,
 } from '../actions/types';
 
 export const submitName = name => {
@@ -147,4 +151,31 @@ export const submitBirthday = birthday => {
         console.log(error);
       });
   };
+};
+
+export const updateSkillName = skillName => ({
+  type: UPDATE_SKILL_NAME,
+  payload: skillName,
+});
+
+export const updateSkillProficiency = skillProficiency => ({
+  type: UPDATE_SKILL_PROFICIENCY,
+  payload: skillProficiency,
+});
+
+export const updateSkill = skill => ({
+  type: UPDATE_SKILL,
+  payload: skill,
+});
+
+export const setProficiencyAndSaveSkill = proficiency => (
+  dispatch,
+  getState
+) => {
+  dispatch(updateSkillProficiency(proficiency));
+  dispatch(updateSkill(getState().user.skill));
+};
+
+export const submitSkills = () => dispatch => {
+  dispatch({ type: NAME_SCREEN });
 };
