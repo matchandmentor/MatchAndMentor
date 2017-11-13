@@ -25,15 +25,27 @@ const styles = {
     fontFamily: 'Montserrat-Regular',
   },
   pickerStyle: {
-    dateIcon: {
-      position: 'absolute',
-      left: 0,
-      top: 4,
-      marginLeft: 20,
-    },
     dateInput: {
-      marginLeft: 56,
+      marginTop: 20,
+      marginLeft: 20,
+      height: 50,
+      borderWidth: 0,
+      alignItems: 'flex-start',
+      padding: 20,
     },
+    placeholderText: {
+      fontSize: 24,
+      fontFamily: 'Montserrat-Regular',
+    },
+    dateText: {
+      fontSize: 24,
+      fontFamily: 'Montserrat-Regular',
+    },
+  },
+  barStyle: {
+    height: 1,
+    backgroundColor: 'black',
+    margin: 20,
   },
 };
 
@@ -52,7 +64,7 @@ function SignUpBirthday(props) {
       <View>
         <ScreenHeader title={props.title} />
         <DatePicker
-          style={{ width: '50%' }}
+          style={{ width: '100%' }}
           date={props.birthday}
           mode="date"
           placeholder="select date"
@@ -63,7 +75,9 @@ function SignUpBirthday(props) {
           customStyles={styles.pickerStyle}
           maxDate={maxDate}
           minDate={minDate}
+          showIcon={false}
         />
+        <View style={styles.barStyle} />
       </View>
       <View>
         <Button
