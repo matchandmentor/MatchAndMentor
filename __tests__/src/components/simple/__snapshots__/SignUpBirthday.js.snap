@@ -60,7 +60,7 @@ exports[`renders correctly 1`] = `
               "width": 142,
             },
             Object {
-              "width": "50%",
+              "width": "100%",
             },
           ],
         ]
@@ -93,7 +93,12 @@ exports[`renders correctly 1`] = `
                 "justifyContent": "center",
               },
               Object {
-                "marginLeft": 56,
+                "alignItems": "flex-start",
+                "borderWidth": 0,
+                "height": 50,
+                "marginLeft": 20,
+                "marginTop": 20,
+                "padding": 20,
               },
               false,
               false,
@@ -110,32 +115,16 @@ exports[`renders correctly 1`] = `
                 Object {
                   "color": "#333",
                 },
-                undefined,
+                Object {
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 24,
+                },
               ]
             }
           >
             01/01/2000
           </Text>
         </View>
-        <Image
-          source={1}
-          style={
-            Array [
-              Object {
-                "height": 32,
-                "marginLeft": 5,
-                "marginRight": 5,
-                "width": 32,
-              },
-              Object {
-                "left": 0,
-                "marginLeft": 20,
-                "position": "absolute",
-                "top": 4,
-              },
-            ]
-          }
-        />
         <Modal
           animationType="none"
           hardwareAccelerated={false}
@@ -247,8 +236,8 @@ exports[`renders correctly 1`] = `
                     >
                       <RCTDatePicker
                         date={946706400000}
-                        maximumDate={1509930391379}
-                        minimumDate={-1646334000000}
+                        maximumDate={1510597052198}
+                        minimumDate={-1646247600000}
                         minuteInterval={undefined}
                         mode="date"
                         onChange={[Function]}
@@ -391,6 +380,15 @@ exports[`renders correctly 1`] = `
         </Modal>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": 1,
+          "margin": 20,
+        }
+      }
+    />
   </View>
   <View>
     <TouchableHighlight
